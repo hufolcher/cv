@@ -1,5 +1,7 @@
 #let green = rgb("#31a269")
 #let blue = rgb("#1f4e95")
+#let grey = rgb(80, 80, 80)
+
 
 #let background_blue3 = rgb("#071829")
 #let background_blue2 = rgb("#113454")
@@ -30,80 +32,99 @@
 }
 
 #let category_header(image_path, label) = {
-  align(horizon)[
-    #grid(
-      columns: (auto, 1fr, auto),
-      // Text | Line | Icon
-      column-gutter: 0.5cm,
-      // --- Text label
-      text(
-        fill: background_blue3,
-        weight: "semibold",
-        size: 15pt,
-      )[#upper[#label]],
-      // --- Expanding line
-      line(
-        length: 100%,
-        stroke: 2pt + gradient.linear(green, blue, angle: 0deg),
-      ),
-      // --- Icon box
-      box(
-        fill: background_blue3,
-        radius: 2.5cm,
-        width: 1cm,
-        height: 1cm,
-        inset: 0.25cm,
-        image(image_path, height: 0.5cm),
-      ),
-    )
-  ]
+  box(inset: (left: 14pt, right: 15pt, top: 10pt))[
+    #align(horizon)[
+      #grid(
+        columns: (auto, 1fr, auto),
+        // Text | Line | Icon
+        column-gutter: 0.5cm,
+        // --- Text label
+        text(
+          fill: background_blue2,
+          weight: "semibold",
+          size: 15pt,
+        )[#upper[#label]],
+        // --- Expanding line
+        line(
+          length: 100%,
+          stroke: 2pt + gradient.linear(green, blue, angle: 0deg),
+        ),
+        // --- Icon box
+        box(
+          fill: background_blue3,
+          radius: 2.5cm,
+          width: 1cm,
+          height: 1cm,
+          inset: 0.25cm,
+          image(image_path, height: 0.5cm),
+        ),
+      )
+    ]]
 }
 #let institution_header(image_path, roles, contract, institution, period) = {
-  align(horizon)[
-    #grid(
-      columns: (.8cm, 1fr),
-      column-gutter: 0.2cm,
-
-      image(image_path, height: .75cm),
-      stack(
-        dir: ttb,
-        spacing: 5pt,
-        text(
-          fill: blue,
-          weight: "semibold",
-          size: 12pt,
-        )[#upper[#roles.join(" / ")]],
-        text(
-          fill: blue,
-          weight: "semibold",
-          size: 12pt,
-        )[#(upper(contract), institution, period).join(" | ")],
-      ),
-    )
-  ]
+  box(inset: (left: 9pt, right: 9pt, bottom: 4pt))[
+    #align(horizon)[
+      #grid(
+        columns: (.8cm, 1fr),
+        column-gutter: 0.12cm,
+        image(image_path, height: .75cm),
+        stack(
+          dir: ttb,
+          spacing: 5pt,
+          text(
+            fill: blue,
+            weight: "semibold",
+            size: 12pt,
+          )[#upper[#roles.join(" / ")]],
+          text(
+            fill: blue,
+            weight: "semibold",
+            size: 12pt,
+          )[#(upper(contract), institution, period).join(" | ")],
+        ),
+      )
+    ]]
 }
 
-#let project(name, steps) = {
-  stack(
-    dir: ttb,
-    spacing: 5pt,
-    text(
-      fill: blue,
-      weight: "semibold",
-      size: 12pt,
-    )[#name],
-    list(..steps
-    ),
-  )
+#let project(name, description, steps, skills) = {
+  set text(fill: grey)
+  box(inset: (left: 16pt, right: 10pt, top: 4pt, bottom: 4pt))[
+    #stack(
+      dir: ttb,
+      spacing: 5pt,
+      text(
+        fill: grey,
+        weight: "semibold",
+        size: 12pt,
+      )[#name],
+
+      box(inset: 4pt)[
+        #stack(
+          dir: ttb,
+          spacing: 8pt,
+          description,
+          list(
+            ..steps,
+          ),
+          ("Compétences", skills.join(", ")).join(": "),
+        )],
+    )]
 }
 
 #let experience(image_path, roles, contract, institution, period, projects) = {
-      stack(
-        dir: ttb,
-        spacing: 5pt,
-        institution_header(image_path, roles, contract, institution, period),
-        ..projects.map(((name, steps)) => project(name, steps))
+  box(inset: (left: 8pt, right: 8pt))[
+    #stack(
+      dir: ttb,
+      spacing: 5pt,
+      institution_header(image_path, roles, contract, institution, period),
+      ..projects.map(((name, description, steps, skills)) => project(
+        name,
+        description,
+        steps,
+        skills,
+      )),
     )
+  ]
 }
 
 #stack(
@@ -170,8 +191,46 @@
       contact_item("icons/grey/marker.png", "Boulogne-Billancourt (92100)"),
     )
   ],
-  box(inset: (left: 15pt, right: 16pt, top: 5pt, bottom: 5pt))[
-    #stack(dir: ttb)[
+  stack(
+    dir: ttb,
+    spacing: 5pt,
+    category_header(
+      "icons/white/briefcase.png",
+      "expériences professionnelles",
+    ),
+    experience(
+      "images/institutions/safran.jpg",
+      ("ingénieur système", "développement logiciel"),
+      "cdi",
+      "Safran Trusted 4D",
+      "Mars 2023 - aujourd'hui",
+      (
+        (
+          "Système Temps Fréquence pour Naval Group",
+          "Système Temps Fréquence pour Naval Group",
+          (
+            "Appel d'offre remporté pour une application de défense critique, développement sur spécifications du systeme (Mécanique, électronique, FPGA & logicielle).",
+            "Conception haut niveau (logique métier, mécanismes d'asservissement).",
+            "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
+            "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
+            "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux): Moteur de simulation (intéractions des différents composants entre eux, modèles physiques d'horloges atomiques) piloté par une interface Qt dédiée.",
+            "UI/UX de l'interface, conception des divers écrans/procédures en collaborations avec le client final.",
+            "Pilotage de la partie logicielle du projet, contacts & revues client.",
+          ),
+          ("C", "C++", "rust"),
+        ),
+        (
+          "Maintenance du Système Temps Fréquence historique pour Naval Group",
+          "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+          (
+            "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
+            "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python).",
+          ),
+          ("C", "C++"),
+        ),
+      ),
+    ),
+    box(inset: (left: 15pt, right: 16pt, top: 5pt, bottom: 5pt))[
       #category_header(
         "icons/white/briefcase.png",
         "expériences professionnelles",
@@ -182,7 +241,31 @@
         "cdi",
         "Safran Trusted 4D",
         "Mars 2023 - aujourd'hui",
-        (("test_project", ("test_project1", "test_project2", "test_project3", "test_project4")), ("test_project", ("test_project1", "test_project2", "test_project3", "test_project4")))
-      )
-    ]],
-)
+        (
+          (
+            "Système Temps Fréquence pour Naval Group",
+            "Système Temps Fréquence pour Naval Group",
+            (
+              "Appel d'offre remporté pour une application de défense critique, développement sur spécifications du systeme (Mécanique, électronique, FPGA & logicielle).",
+              "Conception haut niveau (logique métier, mécanismes d'asservissement).",
+              "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
+              "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
+              "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux): Moteur de simulation (intéractions des différents composants entre eux, modèles physiques d'horloges atomiques) piloté par une interface Qt dédiée.",
+              "UI/UX de l'interface, conception des divers écrans/procédures en collaborations avec le client final.",
+              "Pilotage de la partie logicielle du projet, contacts & revues client.",
+            ),
+            ("C", "C++", "rust"),
+          ),
+          (
+            "Maintenance du Système Temps Fréquence historique pour Naval Group",
+            "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+            (
+              "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
+              "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python).",
+            ),
+            ("C", "C++"),
+          ),
+        ),
+      )],
+  ),
+),
