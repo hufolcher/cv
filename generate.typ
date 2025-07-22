@@ -32,7 +32,7 @@
 }
 
 #let category_header(image_path, label) = {
-  box(inset: (left: 14pt, right: 15pt, top: 10pt))[
+  block(inset: (left: 14pt, right: 15pt, top: 10pt))[
     #align(horizon)[
       #grid(
         columns: (auto, 1fr, auto),
@@ -62,7 +62,7 @@
     ]]
 }
 #let institution_header(image_path, roles, contract, institution, period) = {
-  box(inset: (left: 9pt, right: 9pt, bottom: 4pt))[
+  block(inset: (left: 9pt, right: 9pt, bottom: 4pt), breakable: true)[
     #align(horizon)[
       #grid(
         columns: (.8cm, 1fr),
@@ -88,7 +88,10 @@
 
 #let project(name, description, steps, skills) = {
   set text(fill: grey)
-  box(inset: (left: 16pt, right: 10pt, top: 4pt, bottom: 4pt))[
+  block(
+    inset: (left: 16pt, right: 10pt, top: 4pt, bottom: 4pt),
+    breakable: true,
+  )[
     #stack(
       dir: ttb,
       spacing: 5pt,
@@ -98,7 +101,7 @@
         size: 12pt,
       )[#name],
 
-      box(inset: 4pt)[
+      block(inset: 4pt, breakable: true)[
         #stack(
           dir: ttb,
           spacing: 8pt,
@@ -112,7 +115,7 @@
 }
 
 #let experience(image_path, roles, contract, institution, period, projects) = {
-  box(inset: (left: 8pt, right: 8pt))[
+  block(inset: (left: 8pt, right: 8pt), breakable: true)[
     #stack(
       dir: ttb,
       spacing: 5pt,
@@ -130,10 +133,11 @@
 #stack(
   dir: ttb,
   spacing: 0pt,
-  box(
+  block(
     // --- Header
     fill: background_blue3,
     inset: (left: 40pt, right: 41pt, top: 15pt, bottom: 15pt),
+    breakable: true,
   )[
     #align(left + horizon)[
       #grid(
@@ -230,42 +234,41 @@
         ),
       ),
     ),
-    box(inset: (left: 15pt, right: 16pt, top: 5pt, bottom: 5pt))[
-      #category_header(
-        "icons/white/briefcase.png",
-        "expériences professionnelles",
-      )
-      #experience(
-        "images/institutions/safran.jpg",
-        ("ingénieur système", "développement logiciel"),
-        "cdi",
-        "Safran Trusted 4D",
-        "Mars 2023 - aujourd'hui",
+    category_header(
+      "icons/white/briefcase.png",
+      "expériences professionnelles",
+    ),
+    experience(
+      "images/institutions/safran.jpg",
+      ("ingénieur système", "développement logiciel"),
+      "cdi",
+      "Safran Trusted 4D",
+      "Mars 2023 - aujourd'hui",
+      (
         (
+          "Système Temps Fréquence pour Naval Group",
+          "Système Temps Fréquence pour Naval Group",
           (
-            "Système Temps Fréquence pour Naval Group",
-            "Système Temps Fréquence pour Naval Group",
-            (
-              "Appel d'offre remporté pour une application de défense critique, développement sur spécifications du systeme (Mécanique, électronique, FPGA & logicielle).",
-              "Conception haut niveau (logique métier, mécanismes d'asservissement).",
-              "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
-              "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
-              "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux): Moteur de simulation (intéractions des différents composants entre eux, modèles physiques d'horloges atomiques) piloté par une interface Qt dédiée.",
-              "UI/UX de l'interface, conception des divers écrans/procédures en collaborations avec le client final.",
-              "Pilotage de la partie logicielle du projet, contacts & revues client.",
-            ),
-            ("C", "C++", "rust"),
+            "Appel d'offre remporté pour une application de défense critique, développement sur spécifications du systeme (Mécanique, électronique, FPGA & logicielle).",
+            "Conception haut niveau (logique métier, mécanismes d'asservissement).",
+            "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
+            "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
+            "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux): Moteur de simulation (intéractions des différents composants entre eux, modèles physiques d'horloges atomiques) piloté par une interface Qt dédiée.",
+            "UI/UX de l'interface, conception des divers écrans/procédures en collaborations avec le client final.",
+            "Pilotage de la partie logicielle du projet, contacts & revues client.",
           ),
-          (
-            "Maintenance du Système Temps Fréquence historique pour Naval Group",
-            "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
-            (
-              "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
-              "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python).",
-            ),
-            ("C", "C++"),
-          ),
+          ("C", "C++", "rust"),
         ),
-      )],
+        (
+          "Maintenance du Système Temps Fréquence historique pour Naval Group",
+          "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+          (
+            "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
+            "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python).",
+          ),
+          ("C", "C++"),
+        ),
+      ),
+    ),
   ),
 ),
