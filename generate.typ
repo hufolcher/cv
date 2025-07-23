@@ -274,6 +274,7 @@
   ),
   stack(
     dir: ttb,
+    spacing: 8pt,
     experience(
       "images/institutions/cureety.png",
       0.75cm,
@@ -289,7 +290,7 @@
             "Nouvelles interfaces/fonctionnalités & migration progressive de l'existant vers des interfaces unifiées en flutter (applications mobiles Android & iOS, interface web soignant, interface web patient et backoffice web).",
             "Maintenance des interfaces web existantes (React/NextJS) (interface web soignant et backoffice web).",
           ),
-          ("Dart/Flutter", "JavaScript/TypeScript/React"),
+          ("Dart/Flutter", "JavaScript/TypeScript/React", "Jenkins", "GitLab"),
         ),
         (
           "Back-end",
@@ -298,16 +299,19 @@
             "Transition progressive (endpoint par endpoint) des backends existants en rust pour améliorer les performances, la fiabilité et la maintenabilité.",
             "Migrations, optimisations des schémas/requêtes SQL de la base postgreSQL.",
             "Tests end-to-end des nouveaux services en Rust avec support de simulateurs pour les services externes.",
-            "Maintenance des backends existantes (loopback) (interface web soignant et backoffice web).",
+            "Maintenance des backends existantes (LoopbackJS).",
           ),
           (
             "Rust",
             "PostgreSQL",
+            "API REST",
             "JavaScript",
             "TypeScript",
             "NodeJS",
             "LoopbackJS",
             "Docker",
+            "Jenkins",
+            "GitLab",
           ),
         ),
       ),
@@ -322,17 +326,18 @@
       (
         (
           "Système Temps Fréquence pour Naval Group",
-          "Une \"Horloge\" capable de maintenir un temps de grande précision en autonomie qui distribue des signaux de temps dans de nombreux format électriques et numériques dans un environnement très contraint.",
+          "Une \"Horloge\" capable de maintenir un temps de grande précision en autonomie qui distribue des signaux de temps dans de nombreux format électriques et numériques dans un environnement très contraint embarquant électronique spécifique, FPGA et logiciel.",
           (
-            "Appel d'offre remporté pour une application de défense critique, développement sur spécifications du systeme (Mécanique, électronique, FPGA & logicielle).",
+
             "Conception haut niveau (logiques métier, mécanismes d'asservissement).",
             "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
             "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
             "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux): Moteur de simulation (intéractions des différents composants entre eux, modèles physiques d'horloges atomiques) piloté par une interface Qt dédiée.",
             "UI/UX de l'interface, conception des divers écrans/procédures en collaboration avec le client final.",
             "Pilotage de la partie logicielle du projet, contacts & revues client.",
+                        "Génération automatique de documentations/rapports techniques via typst.",
           ),
-          ("Python", "C", "PyQt/PySide", "PostgreSQL", "Docker"),
+          ("C", "Python", "PyQt/PySide", "PostgreSQL", "Docker","GitLab"),
         ),
         (
           "Maintenance du Système Temps Fréquence historique pour Naval Group",
@@ -341,7 +346,7 @@
             "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
             "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python).",
           ),
-          ("Python", "C", "PyQt/PySide", "VirtualBox"),
+          ("C", "Python", "PyQt/PySide", "VirtualBox", "GitLab"),
         ),
       ),
     ),
@@ -350,7 +355,7 @@
       1.2cm,
       ("ingénieur développement logiciel",),
       "cdi",
-      "Orolia 2S (Avant rachat par Safran)",
+      "Orolia 2S (devenu Safran Trusted 4D)",
       "Jan 2022 - Mars 2023",
       (
         (
@@ -365,16 +370,17 @@
         ),
         (
           "Logiciel de simulation GNSS pour application critique (Skydel)",
-          "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+          "Dans le cadre du développement d'un prototype de leurrage de drones par émission de signaux de navigation GNSS modifiés.",
           (
-            "Ajout de fonctionnalités a un logiciel de simulation civil pour rendre son usage possible dans une application de défense critique (Développement C++, framework Qt, chiffrement cryptographique).",
-            "Démonstrations client (intégration de la solution a d'autres systèmes, mise en oeuvre, contact client).",
+            "Ajout de fonctionnalités à un logiciel de simulation civil pour rendre son usage possible dans une application de défense critique (Développement C++17, framework Qt, chiffrement cryptographique).",
+            "Backend en C++ qui permet de monitorer/piloter tout le sytème (i.e les API des logiciels utilisés dont le simulateur de signaux GNSS, informations matérielles ect ...) exposé en API consommé par les frontaux développé par le client final.",
+            "Démonstrations client (intégration de la solution à d'autres systèmes, mise en oeuvre, contact client).",
           ),
-          ("C++17", "Qt"),
+          ("C++17", "C++20", "Qt", "GitLab"),
         ),
         (
           "Caisson de Navigation Resiliente (NavKite)",
-          "D'abord un prototype alliant la précision d'une centrale inertielle à la détection de signaux GNSS malveillant d'un récepteur intelligent puis rapidement un produit au catalogue Safran Electronic Defense. A la pointe de l'innovation en navigation militaire résiliente",
+          "D'abord un prototype alliant la précision d'une centrale inertielle à la détection de signaux GNSS malveillant d'un récepteur intelligent puis rapidement un produit au catalogue Safran Electronics & Defense. A la pointe de l'innovation en navigation militaire résiliente",
           (
             "Développement, déploiement & intégration au sein d'un système existant d'un logiciel backend en Python qui récupère des données d'une centrale inertielle, la protège des signaux malveillants, la pilote et expose ses fonctionnalités à une interface web (React).",
             "Prototypage rapide, POC en quelques semaines/mois.",
@@ -415,7 +421,7 @@
               weight: "semibold",
             )[Campus George Charpak Provence - Gardanne, 13120],
             list(
-              "Cursus ISMIN (Ingénieur en Micorélectronique et Informatique",
+              "Cursus ISMIN (Ingénieur en Microélectronique et Informatique)",
               "Spécialisation en Microship Design",
               "Enjeu technologique: Information Technologies & Supply Chain",
             ),
@@ -466,11 +472,12 @@
 )
 #stack(
   dir: ttb,
+  spacing: 2pt,
   category_header(
     "icons/white/sliders.png",
     "compétences",
   ),
-  box(inset: (left: 20pt, right: 10pt, top: 5pt))[
+  box(inset: (left: 22pt, right: 10pt, top: 5pt))[
     #stack(
       dir: ttb,
       spacing: 7pt,
@@ -489,7 +496,7 @@
         ).join(", "),
       ).join(": "),
     )],
-  box(inset: (left: 20pt, right: 20pt, top: 5pt))[
+  box(inset: (left: 22pt, right: 20pt, top: 5pt))[
     #stack(
       dir: ttb,
       spacing: 7pt,
@@ -525,11 +532,12 @@
 )
 #stack(
   dir: ttb,
+  spacing: 2pt,
   category_header(
     "icons/white/language.png",
     "langues",
   ),
-  box(inset: (left: 20pt, right: 10pt, top: 5pt))[
+  box(inset: (left: 22pt, right: 10pt, top: 5pt))[
     #stack(
       dir: ttb,
       spacing: 7pt,
