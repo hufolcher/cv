@@ -274,7 +274,6 @@
   ),
   stack(
     dir: ttb,
-    spacing: 8pt,
     experience(
       "images/institutions/cureety.png",
       0.75cm,
