@@ -2,18 +2,10 @@ name: Compile Typst Paper
 
 on:
   workflow_dispatch:
-    inputs:
-      first_name:
-        description: 'First name'
-        required: true
-      last_name:
-        description: 'Last name'
-        required: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Install Fontist
