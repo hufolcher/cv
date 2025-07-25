@@ -24,12 +24,12 @@ jobs:
       - name: Set output filename
         id: vars
         run: |
-          month_letter=Juil
+          month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
           year_short=$(date +'%y')
-          filename="cv_${{ github.event.inputs.first_name }}_${{ github.event.inputs.last_name }}_${month_letter}_${year_short}.pdf"
+          filename="cv_hugo_folcher_${month_letter}_${year_short}.pdf"
           echo "output_name=$filename" >> $GITHUB_OUTPUT
       - name: Compile Typst file
-        run: typst compile paper.typ "${{ steps.vars.outputs.output_name }}"
+        run: typst compile generate.typ "${{ steps.vars.outputs.output_name }}"
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
