@@ -21,7 +21,7 @@ jobs:
           filename="cv_hugo_folcher_${month_letter}_${year_short}.pdf"
           echo "output_name=$filename" >> $GITHUB_OUTPUT
       - name: Compile Typst file
-        run: typst compile generate.typ "${{ steps.vars.outputs.output_name }}"
+        run: typst compile generate.typ "${{ steps.vars.outputs.output_name }}" --font-path ~/.fontist/fonts
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
