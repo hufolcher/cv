@@ -1,10 +1,7 @@
-#let green = rgb("#31a269")
-#let blue = rgb("#1f4e95")
-#let grey = rgb(80, 80, 80)
-
-
-#let background_blue3 = rgb("#071829")
-#let background_blue2 = rgb("#113454")
+#import "color.typ": *
+#import "contact.typ": *
+#import "experience.typ": *
+#import "header.typ": *
 
 #set text(font: "Source Sans Pro", fill: grey, size: 10pt, hyphenate: true)
 #set par(justify: true)
@@ -19,181 +16,6 @@
     height: 50pt,
   ),
 )
-
-#let contact_item(image_path, label) = {
-  stack(
-    dir: ltr,
-    spacing: 5pt,
-    box(
-      fill: white,
-      radius: 2.5cm,
-      width: 0.8cm,
-      height: 0.8cm,
-      inset: 0.15cm,
-      image(image_path, height: 0.5cm),
-    ),
-    align(horizon)[
-      #text(fill: white, size: 10.5pt)[#label]
-    ],
-  )
-}
-
-#let category_header(image_path, label) = {
-  block(inset: (left: 14pt, right: 15pt))[
-    #align(horizon)[
-      #grid(
-        columns: (auto, 1fr, auto),
-        // Text | Line | Icon
-        column-gutter: 0.5cm,
-        // --- Text label
-        text(
-          fill: background_blue2,
-          weight: "semibold",
-          size: 15pt,
-        )[#upper[#label]],
-        // --- Expanding line
-        line(
-          length: 100%,
-          stroke: 2pt + gradient.linear(green, blue, angle: 0deg),
-        ),
-        // --- Icon box
-        box(
-          fill: background_blue3,
-          radius: 2.5cm,
-          width: 1cm,
-          height: 1cm,
-          inset: 0.25cm,
-          image(image_path, height: 0.5cm),
-        ),
-      )
-    ]]
-}
-#let institution_header(
-  image_path,
-  image_width,
-  roles,
-  contract,
-  institution,
-  period,
-) = {
-  block(inset: (left: 9pt, right: 9pt, bottom: 4pt), breakable: true)[
-    #align(horizon)[
-      #grid(
-        columns: (image_width, 1fr),
-        column-gutter: 0.25cm,
-        image(image_path, width: image_width),
-        stack(
-          dir: ttb,
-          spacing: 5pt,
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#upper[#roles.join(" / ")]],
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#(upper(contract), institution, period).join(" | ")],
-        ),
-      )
-    ]]
-}
-
-#let education_header(
-  image_path,
-  image_width,
-  institution,
-  period,
-) = {
-  block(inset: (left: 9pt, right: 9pt, bottom: 4pt), breakable: true)[
-    #align(horizon)[
-      #grid(
-        columns: (image_width, 1fr),
-        column-gutter: 0.25cm,
-        image(image_path, width: image_width),
-        stack(
-          dir: ttb,
-          spacing: 5pt,
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#upper(institution)],
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#period],
-        ),
-      )
-    ]]
-}
-
-#let project(name, description, steps, skills) = {
-  set text()
-  box(
-    inset: (left: 20pt, right: 10pt, top: 8pt, bottom: 4pt),
-    // breakable: true,
-  )[
-    #stack(
-      dir: ttb,
-      spacing: 5pt,
-      text(
-        weight: "semibold",
-        size: 12pt,
-      )[#name],
-
-      box(inset: (left: 8pt, right: 10pt, top: 5pt))[
-        #stack(
-          dir: ttb,
-          spacing: 8pt,
-          description,
-          stack(
-            dir: ttb,
-            spacing: 12pt,
-            list(
-              ..steps,
-            ),
-            text(size: 9.5pt, weight: "semibold")[#(
-                "Compétences",
-                text(size: 10pt, weight: "bold")[#skills.join(", ")],
-              ).join(": ")],
-          ),
-        )],
-    )]
-}
-
-#let experience(
-  image_path,
-  image_width,
-  roles,
-  contract,
-  institution,
-  period,
-  projects,
-) = {
-  block(inset: (left: 14pt, right: 8pt, bottom: 20pt), breakable: true)[
-    #stack(
-      dir: ttb,
-      institution_header(
-        image_path,
-        image_width,
-        roles,
-        contract,
-        institution,
-        period,
-      ),
-      ..projects.map(((name, description, steps, skills)) => project(
-        name,
-        description,
-        steps,
-        skills,
-      )),
-    )
-  ]
-}
-
 
 #box(
   fill: background_blue3,
@@ -327,16 +149,15 @@
           "Système Temps Fréquence pour Naval Group",
           "Une \"Horloge\" capable de maintenir un temps de grande précision en autonomie qui distribue des signaux de temps dans de nombreux format électriques et numériques dans un environnement très contraint embarquant électronique spécifique, FPGA et logiciel.",
           (
-
             "Conception haut niveau (logiques métier, mécanismes d'asservissement).",
             "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
             "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
             "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux): Moteur de simulation (intéractions des différents composants entre eux, modèles physiques d'horloges atomiques) piloté par une interface Qt dédiée.",
             "UI/UX de l'interface, conception des divers écrans/procédures en collaboration avec le client final.",
             "Pilotage de la partie logicielle du projet, contacts & revues client.",
-                        "Génération automatique de documentations/rapports techniques via typst.",
+            "Génération automatique de documentations/rapports techniques via typst.",
           ),
-          ("C", "Python", "PyQt/PySide", "PostgreSQL", "Docker","GitLab"),
+          ("C", "Python", "PyQt/PySide", "PostgreSQL", "Docker", "GitLab"),
         ),
         (
           "Maintenance du Système Temps Fréquence historique pour Naval Group",
