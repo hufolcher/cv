@@ -1,0 +1,37 @@
+name: Compile Typst Paper
+
+on:
+  workflow_dispatch:
+    inputs:
+      first_name:
+        description: 'First name'
+        required: true
+      last_name:
+        description: 'Last name'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Fontist
+        uses: fontist/setup-fontist@v2
+      - name: Install Source Sans Pro font
+        run: fontist install "Source Sans Pro"
+      - uses: typst-community/setup-typst@v4
+      - name: Set output filename
+        id: vars
+        run: |
+          month_letter=Juil
+          year_short=$(date +'%y')
+          filename="cv_${{ github.event.inputs.first_name }}_${{ github.event.inputs.last_name }}_${month_letter}_${year_short}.pdf"
+          echo "output_name=$filename" >> $GITHUB_OUTPUT
+      - name: Compile Typst file
+        run: typst compile paper.typ "${{ steps.vars.outputs.output_name }}"
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper
+          path: "${{ steps.vars.outputs.output_name }}"
