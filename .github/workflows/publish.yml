@@ -27,3 +27,11 @@ jobs:
         with:
           name: paper
           path: "${{ steps.vars.outputs.output_name }}"
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }} - ${{ github.event.head_commit.message }}
+          tag_name: ${{ github.ref_name }}
+          files: ${{ steps.vars.outputs.output_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
