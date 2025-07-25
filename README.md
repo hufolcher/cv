@@ -1,4 +1,4 @@
-# Generation of a modern, styled CV using Typst and GitHub Actions integration.
+# Generation of a modern, styled resume using Typst with a GitHub Actions integration.
 Before starting you need to have a typst binary installed (https://github.com/typst/typst).
 ## Font
 This CV uses the Source Sans Pro font for clean typography.
