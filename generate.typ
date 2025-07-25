@@ -6,7 +6,7 @@
 #let background_blue3 = rgb("#071829")
 #let background_blue2 = rgb("#113454")
 
-#set text(font: "SourceSansPro", fill: grey, size: 10pt, hyphenate: true)
+#set text(font: "Source Sans Pro", fill: grey, size: 10pt, hyphenate: true)
 #set par(justify: true)
 
 #set page(
