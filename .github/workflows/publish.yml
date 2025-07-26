@@ -1,18 +1,26 @@
-name: Compile Typst Paper
+name: Compile and Publish Typst PDF
 
 on:
+  push:
+    branches:
+      - main  # or your target branch
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Install Fontist
         uses: fontist/setup-fontist@v2
+
       - name: Install Source Sans Pro font
         run: fontist install "Source Sans Pro"
+
       - uses: typst-community/setup-typst@v4
+
       - name: Set output filename
         id: vars
         run: |
@@ -20,22 +28,16 @@ jobs:
           year_short=$(date +'%y')
           filename="cv_hugo_folcher_${month_letter}_${year_short}.pdf"
           echo "output_name=$filename" >> $GITHUB_OUTPUT
+
       - name: Compile Typst file
-        run: typst compile generate.typ "${{ steps.vars.outputs.output_name }}" --font-path ~/.fontist/fonts
-      - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v4
+        run: |
+          mkdir -p output
+          typst compile generate.typ "output/${{ steps.vars.outputs.output_name }}" --font-path ~/.fontist/fonts
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: paper
-          path: "${{ steps.vars.outputs.output_name }}"
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload PDF to Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: ${{ steps.vars.outputs.output_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          enable_jekyll: false
