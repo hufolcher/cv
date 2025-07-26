@@ -56,7 +56,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update PDF and README [skip ci]"
-            git push origin HEAD:publish
+            git push --force origin HEAD:publish
           fi
 
 
