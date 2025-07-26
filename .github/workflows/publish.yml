@@ -44,18 +44,27 @@ jobs:
           # Use sed to replace the existing PDF link with the new filename in README.md
           sed -i -E "s|(https://github.com/hufolcher/cv/blob/publish/)[^ )]+\.pdf|\1${filename}|g" README.md
 
-      - name: Commit and push README update
+      - name: Commit README and PDF to 'publish' branch
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add README.md
-          # Check if there is any change to commit, avoid error if none
-          if git diff-index --quiet HEAD; then
+      
+          # Switch to or create the 'publish' branch
+          git fetch origin publish || true
+          git checkout -B publish origin/publish || git checkout -B publish
+      
+          # Copy PDF and update README
+          cp output/${{ steps.vars.outputs.output_name }} .  # move PDF to root
+          git add ${{ steps.vars.outputs.output_name }} README.md
+      
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update README with latest PDF link"
-            git push origin main
+            git commit -m "Update PDF and README [skip ci]"
+            git push origin publish
           fi
+
 
 
 
