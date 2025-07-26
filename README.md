@@ -1,6 +1,9 @@
-# Generation of a modern, styled resume using Typst with a GitHub Actions integration.
+## CI build
+Should output on github-pages once workflow has ended his execution: https://hufolcher.github.io/cv/
+
+## Manual
 Before starting you need to have a typst binary installed (https://github.com/typst/typst).
-## Font
+### Font
 This CV uses the Source Sans Pro font for clean typography.
 You need to have Source Sans Pro installed on your system to compile the CV correctly.
 
@@ -15,7 +18,7 @@ If you prefer manual installation, you can download Source Sans Pro from Adobe F
 
 Please see https://github.com/fontist/fontist
 
-##  Recolor icons (only needed when you add new ones)
+###  Recolor icons (only needed when you add new ones)
 Make sure Pillow is installed:
 ```
 pip install pillow
@@ -31,7 +34,7 @@ cd icons
 ```
 This generates icon variants for use in different themes (light/dark sections).
 
-## Format your CV source (Typst)
+### Format your CV source (Typst)
 Clean and reindent your .typ files with:
 
 ```
@@ -39,7 +42,7 @@ typstyle -i generate.typ
 ```
 More at https://github.com/typstyle-rs/typstyle
 
-## Compile to PDF
+### Compile to PDF
 Finally, generate the resume:
 
 ```
