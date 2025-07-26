@@ -3,8 +3,12 @@ name: Compile and Publish Typst PDF
 on:
   push:
     branches:
-      - main  # or your target branch
+      - main
   workflow_dispatch:
+
+concurrency:
+  group: typst-build
+  cancel-in-progress: true
 
 jobs:
   build:
