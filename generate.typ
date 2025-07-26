@@ -216,6 +216,7 @@
 #pagebreak()
 #stack(
   dir: ttb,
+  spacing: 2pt,
   category_header(
     "icons/white/graduation.png",
     "formation",
