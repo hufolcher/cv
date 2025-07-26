@@ -30,7 +30,7 @@ jobs:
         run: |
           month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
           year_short=$(date +'%y')
-          filename="cv_hugo_folcher_test_${year_short}.pdf"
+          filename="cv_hugo_folcher_${month_letter}_${year_short}.pdf"
           echo "output_name=$filename" >> $GITHUB_OUTPUT
 
       - name: Compile Typst file
