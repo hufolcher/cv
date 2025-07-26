@@ -38,10 +38,18 @@ jobs:
           mkdir -p output
           typst compile generate.typ "output/${{ steps.vars.outputs.output_name }}" --font-path ~/.fontist/fonts
 
-      - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
-          publish_branch: publish
-          enable_jekyll: false
+      - name: Update README with latest PDF link
+        run: |
+          filename=${{ steps.vars.outputs.output_name }}
+          # Use sed to replace the existing PDF link with the new filename in README.md
+          sed -i -E "s|(https://github.com/hufolcher/cv/blob/publish/)[^ )]+\.pdf|\1${filename}|g" README.md
+
+      - name: Commit and push README update
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update README with latest PDF link"
+          git push origin main
+
+
