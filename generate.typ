@@ -81,7 +81,7 @@
         spacing: 1fr,
         contact_item("icons/grey/mail.png", "hle.folcher@gmail.com"),
         contact_item("icons/grey/linkedin.png", "hugo-folcher"),
-        contact_item("icons/grey/github.png", "HugoFolcher"),
+        contact_item("icons/grey/github.png", "hufolcher"),
         contact_item("icons/grey/marker.png", "Boulogne-Billancourt (92100)"),
       )
     ],
