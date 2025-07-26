@@ -1,5 +1,5 @@
 ## CI build
-Should output compiled file once workflow has ended his execution, you can download here: https://github.com/hufolcher/cv/blob/publish/cv_hugo_folcher_jul_25.pdf
+Should output compiled file once workflow has ended his execution, you can download it here: https://github.com/hufolcher/cv/blob/publish/cv_hugo_folcher_jul_25.pdf
 
 ## Manual
 Before starting you need to have a typst binary installed (https://github.com/typst/typst).
