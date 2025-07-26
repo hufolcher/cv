@@ -49,21 +49,16 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
       
-          # Switch to or create the 'publish' branch
-          git fetch origin publish || true
-          git checkout -B publish origin/publish || git checkout -B publish
-      
-          # Copy PDF and update README
           cp output/${{ steps.vars.outputs.output_name }} .  # move PDF to root
           git add ${{ steps.vars.outputs.output_name }} README.md
       
-          # Only commit if there are changes
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Update PDF and README [skip ci]"
-            git push origin publish
+            git push origin HEAD:publish
           fi
+
 
 
 
