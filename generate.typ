@@ -222,10 +222,10 @@
   block(inset: (left: 14pt, right: 8pt), breakable: true)[
     #stack(
       dir: ttb,
-      spacing: 15pt,
+      spacing: 16pt,
       stack(
         dir: ttb,
-        spacing: 5pt,
+        spacing: 4pt,
         education_header(
           "images/institutions/minesstetienne.png",
           0.75cm,
@@ -248,7 +248,7 @@
       ),
       stack(
         dir: ttb,
-        spacing: 5pt,
+        spacing: 4pt,
         education_header(
           "images/institutions/montaigne.png",
           0.75cm,
@@ -273,7 +273,7 @@
       ),
       stack(
         dir: ttb,
-        spacing: 5pt,
+        spacing: 4pt,
         education_header(
           "images/institutions/charles_gide.jpg",
           0.75cm,
