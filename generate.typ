@@ -118,7 +118,7 @@
             [Transition progressive (endpoint par endpoint) des backends existants en rust pour améliorer les performances, la fiabilité et la maintenabilité.],
             [Migrations, optimisations des schémas/requêtes SQL de la base postgreSQL.],
             [Tests end-to-end des nouveaux services en Rust avec support de simulateurs pour les services externes.],
-            [Maintenance des backends existantes (LoopbackJS).],
+            [Maintenance des backends existants (LoopbackJS).],
           ),
           (
             "Rust",
