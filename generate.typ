@@ -225,7 +225,7 @@
       spacing: 15pt,
       stack(
         dir: ttb,
-        spacing: 2pt,
+        spacing: 5pt,
         education_header(
           "images/institutions/minesstetienne.png",
           0.75cm,
