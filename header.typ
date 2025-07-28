@@ -9,7 +9,7 @@
         column-gutter: 0.5cm,
         text(
           fill: background_blue2,
-          weight: "semibold",
+          weight: "bold",
           size: 15pt,
         )[#upper[#label]],
         line(
@@ -27,7 +27,7 @@
       )
     ]]
 }
-#let institution_header(
+#let company_header(
   image_path,
   image_width,
   roles,
@@ -35,28 +35,25 @@
   institution,
   period,
 ) = {
-  block(inset: (left: 9pt, right: 9pt, bottom: 4pt), breakable: true)[
+  block(inset: (left: 9pt, right: 9pt), breakable: true)[
     #align(horizon)[
-      #grid(
-        columns: (image_width, 1fr),
-        column-gutter: 0.25cm,
-        image(image_path, width: image_width),
-        stack(
-          dir: ttb,
-          spacing: 5pt,
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#upper[#roles.join(" / ")]],
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#(upper(contract), institution, period).join(" | ")],
-        ),
-      )
-    ]]
+      #text(
+        fill: blue,
+        weight: "bold",
+        size: 12.5pt,
+      )[
+        #grid(
+          columns: (image_width, 1fr),
+          column-gutter: 0.25cm,
+          image(image_path, width: image_width),
+          stack(
+            dir: ttb,
+            spacing: 5pt,
+            upper[#roles.join(" / ")],
+            upper[#contract | #institution | #period],
+          ),
+        )
+      ]]]
 }
 
 #let education_header(
@@ -67,24 +64,21 @@
 ) = {
   block(inset: (left: 9pt, right: 9pt, bottom: 4pt), breakable: true)[
     #align(horizon)[
-      #grid(
-        columns: (image_width, 1fr),
-        column-gutter: 0.25cm,
-        image(image_path, width: image_width),
-        stack(
-          dir: ttb,
-          spacing: 5pt,
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#upper(institution)],
-          text(
-            fill: blue,
-            weight: "semibold",
-            size: 13pt,
-          )[#period],
-        ),
-      )
-    ]]
+      #text(
+        fill: blue,
+        weight: "bold",
+        size: 13pt,
+      )[
+        #grid(
+          columns: (image_width, 1fr),
+          column-gutter: 0.25cm,
+          image(image_path, width: image_width),
+          stack(
+            dir: ttb,
+            spacing: 5pt,
+            upper(institution),
+            period,
+          ),
+        )
+      ]]]
 }

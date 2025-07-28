@@ -4,16 +4,15 @@
 #let project(name, description, steps, skills) = {
   set text()
   box(
-    inset: (left: 20pt, right: 10pt, top: 8pt, bottom: 4pt),
+    inset: (left: 20pt, right: 10pt, top: 7pt, bottom: 4pt),
   )[
     #stack(
       dir: ttb,
       spacing: 5pt,
       text(
-        weight: "semibold",
-        size: 12pt,
+        weight: "bold",
+        size: 11.5pt,
       )[#name],
-
       box(inset: (left: 8pt, right: 10pt, top: 5pt))[
         #stack(
           dir: ttb,
@@ -23,12 +22,11 @@
             dir: ttb,
             spacing: 12pt,
             list(
+              spacing: 7pt,
               ..steps,
             ),
-            text(size: 9.5pt, weight: "semibold")[#(
-                "Compétences",
-                text(size: 10pt, weight: "bold")[#skills.join(", ")],
-              ).join(": ")],
+            text(size: 9.5pt, weight: "bold")[
+              Compétences: #skills.join(", ")],
           ),
         )],
     )]
@@ -46,7 +44,8 @@
   block(inset: (left: 14pt, right: 8pt, bottom: 20pt), breakable: true)[
     #stack(
       dir: ttb,
-      institution_header(
+      spacing: 5pt,
+      company_header(
         image_path,
         image_width,
         roles,
