@@ -43,41 +43,31 @@ jobs:
 
           echo "Updated configuration.json:"
           cat configuration.json
+      
+      - name: Set output file prefix
+        id: vars
+        run: |
+          month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
+          year_short=$(date +'%y')
+          filename="cv_hugo_folcher_${month_letter}_${year_short}"
+          echo "output_prefix=$filename" >> $GITHUB_OUTPUT
 
       - name: Build in all languages
         id: build_all
         run: |
           mkdir -p output
-
-          # Languages to generate
           LANGUAGES="fr en es de"
 
-          month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
-          year_short=$(date +'%y')
-
           for LANG in $LANGUAGES; do
-            echo "→ Generating CV in language: $LANG"
-
-            # Create a temp config override
             jq --arg lang "$LANG" '.language = $lang' configuration.json > config.tmp && mv config.tmp configuration.json
-
-            # Output file name
-            OUT="cv_hugo_folcher_${month_letter}_${year_short}_${LANG}.pdf"
-
-            # Compile
-            typst compile generate.typ "output/$OUT" --font-path ~/.fontist/fonts
-
+            typst compile generate.typ "output/${{ steps.vars.outputs.output_prefix }}_${LANG}.pdf" --font-path ~/.fontist/fonts
             echo "Generated: output/$OUT"
           done
 
       - name: Update README with latest FR PDF link
         run: |
-          month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
-          year_short=$(date +'%y')
-          fr_filename="cv_hugo_folcher_${month_letter}_${year_short}_fr.pdf"
-
+          fr_filename="${{ steps.vars.outputs.output_prefix }}_fr.pdf"
           echo "Updating README link to: $fr_filename"
-
           sed -i -E "s|(https://github.com/hufolcher/cv/blob/publish/)[^ )]+\.pdf|\1${fr_filename}|g" README.md
 
       - name: Commit updated README to main
@@ -100,7 +90,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           # Save the PDF somewhere safe BEFORE wiping the repo
-          cp "output/*.pdf" /tmp/
+          cp output/*.pdf /tmp/
 
           # Fetch refs without checking out publish
           git fetch origin publish || true
@@ -113,7 +103,7 @@ jobs:
           git clean -fdx
 
           # Restore the PDF into the now-empty branch
-          cp "/tmp/*.pdf" .
+          cp /tmp/*.pdf .
 
           # Stage and commit only the PDF
           git add *.pdf
