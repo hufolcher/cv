@@ -95,20 +95,24 @@ jobs:
           PDF_FILE="${{ steps.vars.outputs.output_name }}"
           cp "output/$PDF_FILE" .
 
-          # Fetch publish branch or create empty if doesn't exist
+          # Ensure we are up-to-date with remote refs,
+          # but DO NOT checkout publish.
           git fetch origin publish || true
 
-          # Create a clean branch with no history
+          # Create a *new clean branch* with no history
           git switch --orphan publish
 
-          # Remove everything from index
-          git rm -rf . >/dev/null 2>&1 || true
+          # Remove every tracked file without touching working directory state errors
+          git reset --hard
 
-          # Add only the PDF
+          # Remove untracked files (like config.json, build leftovers)
+          git clean -fdx
+
+          # Stage only the PDF
           git add "$PDF_FILE"
 
-          # Commit
+          # Commit clean publish state
           git commit -m "Publish PDF $PDF_FILE [skip ci]"
 
-          # Force push the cleaned branch
+          # Force push to overwrite the branch
           git push --force origin publish
