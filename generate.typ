@@ -72,7 +72,7 @@
               stroke: 2pt + gradient.linear(green, blue, angle: 0deg),
             ),
             box(inset: 3pt)[
-              #text(size: 12.1pt, fill: white)[#translated.intro],
+              #text(size: 12.1pt, fill: white)[#translated.intro]
             ],
           ),
         )]
