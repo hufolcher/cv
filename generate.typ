@@ -118,42 +118,8 @@
       translated.experiences.cureety.label,
       translated.experiences.cureety.date,
       (
-<<<<<<< HEAD
-        (
-          "Front-end",
-          [Cureety est un Saas de télésurveillance en oncologie: chaque jour les patients complètent des questionnaires dépendant de leur pathologie/traitement qui permettent de suivre l'évolution de leur état automatiquement. De leur côté, les soignants disposent d'une interface métier complexe pour gérer leurs patients.],
-          (
-            [Nouvelles interfaces/fonctionnalités & migration progressive de l'existant vers des interfaces unifiées en flutter (applications mobiles Android & iOS, interface web soignant, interface web patient et backoffice web).],
-            [Maintenance des interfaces web existantes (React/NextJS) (interface web soignant et backoffice web).],
-          ),
-          ("Dart/Flutter", "JavaScript/TypeScript/React", "Jenkins", "GitLab"),
-        ),
-        (
-          "Back-end",
-          [Cureety est en phase de croissante rapide et se doit de faire évoluer ses services backend pour qu'ils suivent la demande sans interruption de service.],
-          (
-            [Transition progressive (endpoint par endpoint) des backends existants en rust pour améliorer les performances, la fiabilité et la maintenabilité.],
-            [Migrations, optimisations des schémas/requêtes SQL de la base postgreSQL.],
-            [Tests end-to-end des nouveaux services en Rust avec support de simulateurs pour les services externes.],
-            [Maintenance des backends existants (LoopbackJS).],
-          ),
-          (
-            "Rust",
-            "PostgreSQL",
-            "API REST",
-            "JavaScript",
-            "TypeScript",
-            "NodeJS",
-            "LoopbackJS",
-            "Docker",
-            "Jenkins",
-            "GitLab",
-          ),
-        ),
-=======
         translated.experiences.cureety.projects.frontend,
         translated.experiences.cureety.projects.backend,
->>>>>>> 734cc34 (Some cleanup, add traduction support)
       ),
       translated.experiences.common,
     ),
@@ -198,13 +164,8 @@
   block(inset: (left: 14pt, right: 8pt), breakable: true)[
     #stack(
       dir: ttb,
-<<<<<<< HEAD
-      spacing: 16pt,
-      stack(
-=======
       spacing: 15pt,
       ..translated.education.list.map(formation => stack(
->>>>>>> 734cc34 (Some cleanup, add traduction support)
         dir: ttb,
         spacing: 4pt,
         education_header(
@@ -222,51 +183,10 @@
               #list(..step.details)
             ]),
           )],
-<<<<<<< HEAD
-      ),
-      stack(
-        dir: ttb,
-        spacing: 4pt,
-        education_header(
-          "images/institutions/montaigne.png",
-          0.75cm,
-          "classe préparatoire aux grandes écoles (MPSI-MP*)",
-          "2015 - 2018",
-        ),
-        box(inset: (left: 20pt, right: 10pt, top: 5pt))[
-          #stack(
-            dir: ttb,
-            spacing: 7pt,
-            text(weight: "bold")[Lycée Montaigne - Bordeaux, 33000],
-            list(
-              "MPSI-MP* - Option Informatique / 2015 - 2017",
-            ),
-            text(
-              weight: "bold",
-            )[Lycée Godefroy de Bouillon - Clermont-Ferrand, 63000],
-            list(
-              "MP - Option Informatique / 2017 - 2018",
-            ),
-          )],
-      ),
-      stack(
-        dir: ttb,
-        spacing: 4pt,
-        education_header(
-          "images/institutions/charles_gide.jpg",
-          0.75cm,
-          "baccalauréat scientifique mention très bien",
-          "2015",
-        ),
-        box(inset: (left: 20pt, right: 10pt, top: 5pt))[
-          #text(weight: "bold")[Lycée Charles Gide - Uzès, 30700],
-        ],
-      ),
-=======
       )),
->>>>>>> 734cc34 (Some cleanup, add traduction support)
     )],
 )
+
 #stack(
   dir: ttb,
   spacing: 4pt,
@@ -282,12 +202,13 @@
       [#text(weight: "bold")[#translated.skills.programming_tools_label]: #translated.skills.tools.join(", ")],
     )],
 )
+
 #stack(
   dir: ttb,
   spacing: 4pt,
   category_header(
     "icons/white/language.png",
-     translated.languages.title,
+    translated.languages.title,
   ),
   box(inset: (left: 25pt, right: 10pt))[
     #stack(
