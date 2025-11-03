@@ -18,22 +18,13 @@
 )
 
 // --- Configuration
-#let configuration = {
-  let file = read("configuration.json", encoding: "utf8")
-  if file != none {
-    json(file)
-  } else {
-    (:)
-  }
-}
+#let configuration = json("configuration.json")
+
 #let language = configuration.language
 #let address = configuration.address
 
 // --- Translation
-#let translated = {
-  let file = read(("text/", language, ".json").join(), encoding: "utf8")
-  if file != none { json(file) } else { (:) }
-}
+#let translated = json(("text/", language, ".json").join())
 
 // --- Document
 #box(
