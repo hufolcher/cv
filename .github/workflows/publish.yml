@@ -5,6 +5,15 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      language:
+        description: "Override language (fr, en, es, de)"
+        required: false
+        type: string
+      address:
+        description: "Override address (printed under name)"
+        required: false
+        type: string
 
 concurrency:
   group: typst-build
@@ -24,6 +33,26 @@ jobs:
         run: fontist install "Source Sans Pro"
 
       - uses: typst-community/setup-typst@v4
+
+      - name: Apply overrides to configuration.json
+        run: |
+          # Load current config
+          CONFIG_FILE="configuration.json"
+          LANGUAGE_INPUT="${{ github.event.inputs.language }}"
+          ADDRESS_INPUT="${{ github.event.inputs.address }}"
+
+          # Replace language if language override exists
+          if [ -n "$LANGUAGE_INPUT" ]; then
+            jq --arg lang "$LANGUAGE_INPUT" '.language = $lang' "$CONFIG_FILE" > tmp && mv tmp "$CONFIG_FILE"
+          fi
+
+          # Replace address if address override exists
+          if [ -n "$ADDRESS_INPUT" ]; then
+            jq --arg addr "$ADDRESS_INPUT" '.address = $addr' "$CONFIG_FILE" > tmp && mv tmp "$CONFIG_FILE"
+          fi
+
+          echo "Updated configuration.json:"
+          cat configuration.json
 
       - name: Set output filename
         id: vars
