@@ -1,0 +1,273 @@
+{
+  "job_title": "Ingénieur Développement Logiciel",
+  "intro": "Passionné de sciences et de technologie, ma formation et mes expériences ont fait de moi quelqu'un de rigoureux, efficace et polyvalent.",
+  "experiences": {
+    "title": "expériences professionnelles",
+    "common": {
+      "skill_title": "Compétences"
+    },
+    "cureety": {
+      "roles": [
+        "ingénieur logiciel fullstack"
+      ],
+      "label": "Cureety",
+      "contract_type": "CDI",
+      "date": "Avril 2025 - aujourd'hui",
+      "projects": {
+        "frontend": {
+          "label": "Front-end",
+          "description": "Cureety est un Saas de télésurveillance en oncologie: chaque jour les patients complètent des questionnaires dépendant de leur pathologie/traitement qui permettent de suivre l'évolution de leur état automatiquement. De leur côté, les soignants disposent d'une interface métier complexe pour gérer leurs patients.",
+          "tasks": [
+            "Nouvelles interfaces/fonctionnalités & migration progressive de l'existant vers des interfaces unifiées en flutter (applications mobiles Android & iOS, interface web soignant, interface web patient et backoffice web).",
+            "Maintenance des interfaces web existantes (React/NextJS) (interface web soignant et backoffice web)."
+          ],
+          "stack": [
+            "Dart/Flutter/Riverpod",
+            "JavaScript/TypeScript/React",
+            "Jenkins",
+            "GitLab"
+          ]
+        },
+        "backend": {
+          "label": "Back-end",
+          "description": "Cureety est en phase de croissante rapide et se doit de faire évoluer ses services backend pour qu'ils suivent la demande sans interruption de service.",
+          "tasks": [
+            "Transition progressive (endpoint par endpoint) des backends existants en rust pour améliorer les performances, la fiabilité et la maintenabilité.",
+            "Optimisation de schémas / requêtes PostgreSQL.",
+            "Migrations, optimisations des schémas/requêtes SQL de la base postgreSQL.",
+            "Tests end-to-end des nouveaux services en Rust avec support de simulateurs pour les services externes.",
+            "Maintenance des backends existants (LoopbackJS)."
+          ],
+          "stack": [
+            "Rust/ActixWeb/Sqlx",
+            "PostgreSQL",
+            "API REST",
+            "JavaScript/TypeScript",
+            "NodeJS",
+            "LoopbackJS",
+            "Docker",
+            "Jenkins",
+            "GitLab"
+          ]
+        }
+      }
+    },
+    "safran": {
+      "roles": [
+        "ingénieur système",
+        "développement logiciel"
+      ],
+      "label": "Safran Electronics & Defense",
+      "contract_type": "CDI",
+      "date": "Mars 2023 - Avril 2025",
+      "projects": {
+        "beluga": {
+          "label": "Système Temps Fréquence pour Naval Group",
+          "description": "Une \"Horloge\" capable de maintenir un temps de grande précision en autonomie qui distribue des signaux de temps dans de nombreux format électriques et numériques dans un environnement très contraint embarquant électronique spécifique, FPGA et logiciel.",
+          "tasks": [
+            "Conception haut niveau (logiques métier, mécanismes d'asservissement).",
+            "Logiciel embarqué en C (OS Linux) (ordonnancement d'actions, pilotage de divers FPGAs & cartes électroniques dédiées, TCP/IP sécurisé avec SSL, base de données PostgreSQL, communication liaison série UART).",
+            "Logiciel interface avec le framework Qt en python (OS Linux) (Interface métier complexe, TCP/IP sécurisé avec SSL, base de données PostgreSQL).",
+            "Simulateur complet du système pour automatiser les tests de l'interface et faciliter la formation des utilisateurs en python (OS Linux) piloté par une interface Qt dédiée.",
+            "UI/UX de l'interface, conception des divers écrans/procédures en collaboration avec le client final.",
+            "Pilotage de la partie logicielle du projet, contacts & revues client.",
+            "Génération automatique de documentations/rapports techniques via typst."
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide",
+            "PostgreSQL",
+            "Docker",
+            "GitLab"
+          ]
+        },
+        "cachalot": {
+          "label": "Maintenance du Système Temps Fréquence historique pour Naval Group",
+          "description": "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+          "tasks": [
+            "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
+            "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python)."
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide",
+            "VirtualBox",
+            "GitLab"
+          ]
+        }
+      }
+    },
+    "orolia": {
+      "roles": [
+        "ingénieur développement logiciel"
+      ],
+      "label": "Orolia 2S (devenu Safran Trusted 4D)",
+      "contract_type": "CDI",
+      "date": "Jan 2022 - Mars 2023",
+      "projects": {
+        "artcard": {
+          "label": "Carte de temps à référence atomique (ARTCARD)",
+          "description": "Co-développée en open source avec Meta, il s'agit d'une carte embarquant un FPGA, un récepteur GNSS (Ublox) & une micro-horloge atomique (MRO50) à destination des datacenters.",
+          "tasks": [
+            "Logiciel d'asservissement de l'horloge sur une source GNSS (Langage C), développement & support open source (Accessible ici: https://github.com/Orolia2s/oscillatord).",
+            "Banc de programmation électronique (flash d'un FTDI, du FPGA et d'une EEPROM), de tests & IHM associée pour que cela puisse être fait par un opérateur en usine (EMS AsteelFlash).",
+            "Participation au développement du driver linux spécifique open source, désormais intégré dans le kernel linux (Accessible ici: https://github.com/Time-Appliances-Project/Time-Card).",
+            "Développements sur le fork interne du driver linux afin d'expérimenter diverses intégrations pour des prototypes"
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide"
+          ]
+        },
+        "chaperon": {
+          "label": "Logiciel de simulation GNSS pour application critique (Skydel)",
+          "description": "Dans le cadre du développement d'un prototype de leurrage de drones par émission de signaux de navigation GNSS modifiés.",
+          "tasks": [
+            "Ajout de fonctionnalités à un logiciel de simulation civil pour rendre son usage possible dans une application de défense critique (Développement C++17, framework Qt, chiffrement cryptographique).",
+            "Backend en C++ qui permet de monitorer/piloter tout le sytème (i.e les API des logiciels utilisés dont le simulateur de signaux GNSS, informations matérielles ect ...) exposé en API à des interfaces.",
+            "Démonstrations client (intégration de la solution à d'autres systèmes, mise en oeuvre, contact client)."
+          ],
+          "stack": [
+            "C++17",
+            "C++20",
+            "Qt",
+            "GitLab"
+          ]
+        },
+        "navkite": {
+          "label": "Caisson de Navigation Resiliente (NavKite)",
+          "description": "D'abord un prototype alliant la précision d'une centrale inertielle à la détection de signaux GNSS malveillant d'un récepteur intelligent puis rapidement un produit au catalogue Safran Electronics & Defense. A la pointe de l'innovation en navigation militaire résiliente.",
+          "tasks": [
+            "Développement, déploiement & intégration au sein d'un système existant d'un logiciel backend (Python) qui récupère des données d'une centrale inertielle, la protège des signaux malveillants, la pilote et expose ses fonctionnalités à une interface web (React).",
+            "Prototypage rapide, POC en quelques semaines/mois puis amélioration continue.",
+            "Démonstrations clients sur le terrain",
+            "Industrialisation de la partie logicielle (packaging & OS linux custom avec buildroot)"
+          ],
+          "stack": [
+            "Python/Gunicorn/Socketio",
+            "React",
+            "Docker",
+            "Buildroot"
+          ]
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "formation",
+    "list": [
+      {
+        "logo": "minesstetienne.png",
+        "label": "école nationale supérieure des mines de saint-étienne",
+        "date": "2018 - 2021",
+        "steps": [
+          {
+            "location": "Campus George Charpak Provence - Gardanne, 13120",
+            "details": [
+              "Cursus ISMIN (Ingénieur en Microélectronique et Informatique)",
+              "Spécialisation en Microship Design",
+              "Enjeu technologique: Information Technologies & Supply Chain"
+            ]
+          }
+        ]
+      },
+      {
+        "logo": "montaigne.png",
+        "label": "classe préparatoire aux grandes écoles (MPSI-MP*)",
+        "date": "2015 - 2018",
+        "steps": [
+          {
+            "location": "Lycée Montaigne - Bordeaux, 33000",
+            "details": [
+              "MPSI-MP* - Option Informatique / 2015 - 2017"
+            ]
+          },
+          {
+            "location": "Lycée Godefroy de Bouillon - Clermont-Ferrand, 63000",
+            "details": [
+              "MP - Option Informatique / 2017 - 2018"
+            ]
+          }
+        ]
+      },
+      {
+        "logo": "charles_gide.jpg",
+        "label": "baccalauréat scientifique mention très bien",
+        "date": "2015",
+        "steps": [
+          {
+            "location": "Lycée Charles Gide - Uzès, 30700",
+            "details": []
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "compétences",
+    "programming_languages_label": "Langages",
+    "programming_tools_label": "Framework/outils",
+    "languages": [
+      "Python",
+      "C",
+      "Rust",
+      "C++",
+      "SQL",
+      "Dart",
+      "Javascript",
+      "Typescript",
+      "Bash"
+    ],
+    "tools": [
+      "Systèmes UNIX",
+      "Commandes POSIX",
+      "Git",
+      "GitLab",
+      "Github",
+      "Bitbucket",
+      "Wireshark",
+      "VirtualBox",
+      "Nix packet manager",
+      "Qt (C++)",
+      "PySide/PyQt",
+      "PostgreSQL",
+      "SqlX",
+      "ActixWeb",
+      "Buildroot",
+      "Flutter",
+      "Riverpod",
+      "React",
+      "Docker",
+      "Podman",
+      "Grafana",
+      "SQLALchemy",
+      "Typst",
+      "Jenkins",
+      "Uv",
+      "Valgrind",
+      "GDB",
+      "Yocto",
+      "OpenGL"
+    ]
+  },
+  "languages": {
+    "title": "langues",
+    "list": [
+      {
+        "label": "français",
+        "level": "Langue Maternelle"
+      },
+      {
+        "label": "anglais",
+        "level": "Professionnel"
+      },
+      {
+        "label": "espagnol",
+        "level": "Scolaire"
+      }
+    ]
+  }
+}
