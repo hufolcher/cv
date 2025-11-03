@@ -6,10 +6,6 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      language:
-        description: "Override language (fr, en, es, de)"
-        required: false
-        type: string
       address:
         description: "Override address (printed under name)"
         required: false
@@ -38,13 +34,7 @@ jobs:
         run: |
           # Load current config
           CONFIG_FILE="configuration.json"
-          LANGUAGE_INPUT="${{ github.event.inputs.language }}"
           ADDRESS_INPUT="${{ github.event.inputs.address }}"
-
-          # Replace language if language override exists
-          if [ -n "$LANGUAGE_INPUT" ]; then
-            jq --arg lang "$LANGUAGE_INPUT" '.language = $lang' "$CONFIG_FILE" > tmp && mv tmp "$CONFIG_FILE"
-          fi
 
           # Replace address if address override exists
           if [ -n "$ADDRESS_INPUT" ]; then
@@ -54,24 +44,41 @@ jobs:
           echo "Updated configuration.json:"
           cat configuration.json
 
-      - name: Set output filename
-        id: vars
+      - name: Build in all languages
+        id: build_all
+        run: |
+          mkdir -p output
+
+          # Languages to generate
+          LANGUAGES="fr en es de"
+
+          month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
+          year_short=$(date +'%y')
+
+          for LANG in $LANGUAGES; do
+            echo "→ Generating CV in language: $LANG"
+
+            # Create a temp config override
+            jq --arg lang "$LANG" '.language = $lang' configuration.json > config.tmp && mv config.tmp configuration.json
+
+            # Output file name
+            OUT="cv_hugo_folcher_${month_letter}_${year_short}_${LANG}.pdf"
+
+            # Compile
+            typst compile generate.typ "output/$OUT" --font-path ~/.fontist/fonts
+
+            echo "Generated: output/$OUT"
+          done
+
+      - name: Update README with latest FR PDF link
         run: |
           month_letter=$(date +'%b' | tr '[:upper:]' '[:lower:]')
           year_short=$(date +'%y')
-          filename="cv_hugo_folcher_${month_letter}_${year_short}.pdf"
-          echo "output_name=$filename" >> $GITHUB_OUTPUT
+          fr_filename="cv_hugo_folcher_${month_letter}_${year_short}_fr.pdf"
 
-      - name: Compile Typst file
-        run: |
-          mkdir -p output
-          typst compile generate.typ "output/${{ steps.vars.outputs.output_name }}" --font-path ~/.fontist/fonts
+          echo "Updating README link to: $fr_filename"
 
-      - name: Update README with latest PDF link
-        run: |
-          filename=${{ steps.vars.outputs.output_name }}
-          # Use sed to replace the existing PDF link with the new filename in README.md
-          sed -i -E "s|(https://github.com/hufolcher/cv/blob/publish/)[^ )]+\.pdf|\1${filename}|g" README.md
+          sed -i -E "s|(https://github.com/hufolcher/cv/blob/publish/)[^ )]+\.pdf|\1${fr_filename}|g" README.md
 
       - name: Commit updated README to main
         run: |
@@ -92,10 +99,8 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          PDF_FILE="${{ steps.vars.outputs.output_name }}"
-
           # Save the PDF somewhere safe BEFORE wiping the repo
-          cp "output/$PDF_FILE" /tmp/
+          cp "output/*.pdf" /tmp/
 
           # Fetch refs without checking out publish
           git fetch origin publish || true
@@ -108,11 +113,11 @@ jobs:
           git clean -fdx
 
           # Restore the PDF into the now-empty branch
-          cp "/tmp/$PDF_FILE" .
+          cp "/tmp/*.pdf" .
 
           # Stage and commit only the PDF
-          git add "$PDF_FILE"
-          git commit -m "Publish $PDF_FILE [skip ci]"
+          git add *.pdf
+          git commit -m "Publish PDF files from CI"
 
           # Force push clean branch
           git push --force origin publish
