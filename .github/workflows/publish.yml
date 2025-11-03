@@ -87,32 +87,31 @@ jobs:
             git push origin main
           fi
 
-      - name: Push PDF to publish branch (PDF only)
+      - name: Push PDF to publish branch (PDF only, clean)
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           PDF_FILE="${{ steps.vars.outputs.output_name }}"
-          cp "output/$PDF_FILE" .
 
-          # Ensure we are up-to-date with remote refs,
-          # but DO NOT checkout publish.
+          # Get latest refs but do NOT checkout publish
           git fetch origin publish || true
 
-          # Create a *new clean branch* with no history
+          # Create an orphan publish branch (no history)
           git switch --orphan publish
 
-          # Remove every tracked file without touching working directory state errors
+          # Remove all tracked & untracked files
           git reset --hard
-
-          # Remove untracked files (like config.json, build leftovers)
           git clean -fdx
+
+          # Copy the PDF back from the build output directory
+          cp "output/$PDF_FILE" .
 
           # Stage only the PDF
           git add "$PDF_FILE"
 
-          # Commit clean publish state
-          git commit -m "Publish PDF $PDF_FILE [skip ci]"
+          # Commit
+          git commit -m "Publish $PDF_FILE [skip ci]"
 
-          # Force push to overwrite the branch
+          # Force push clean branch
           git push --force origin publish
