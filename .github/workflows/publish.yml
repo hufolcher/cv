@@ -92,6 +92,8 @@ jobs:
           # Save the PDF somewhere safe BEFORE wiping the repo
           cp output/*.pdf /tmp/
 
+          git restore .
+
           # Fetch refs without checking out publish
           git fetch origin publish || true
 
