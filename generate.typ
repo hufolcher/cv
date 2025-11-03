@@ -21,7 +21,7 @@
 #let configuration = {
   let file = read("configuration.json", encoding: "utf8")
   if file != none {
-    json.decode(file)
+    json(file)
   } else {
     (:)
   }
@@ -32,7 +32,7 @@
 // --- Translation
 #let translated = {
   let file = read(("text/", language, ".json").join(), encoding: "utf8")
-  if file != none { json.decode(file) } else { (:) }
+  if file != none { json(file) } else { (:) }
 }
 
 // --- Document
