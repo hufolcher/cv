@@ -61,7 +61,7 @@ jobs:
           for LANG in $LANGUAGES; do
             jq --arg lang "$LANG" '.language = $lang' configuration.json > config.tmp && mv config.tmp configuration.json
             typst compile generate.typ "output/${{ steps.vars.outputs.output_prefix }}_${LANG}.pdf" --font-path ~/.fontist/fonts
-            echo "Generated: output/$OUT"
+            echo "Generated: output/${{ steps.vars.outputs.output_prefix }}_${LANG}.pdf"
           done
 
       - name: Update README with latest FR PDF link
