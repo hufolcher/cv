@@ -53,7 +53,7 @@
         },
         "safran": {
             "roles": [
-                "System Engineer",
+                "R&D System Engineer",
                 "Software Development"
             ],
             "label": "Safran Electronics & Defense",
@@ -100,7 +100,7 @@
         },
         "orolia": {
             "roles": [
-                "Software Engineer"
+                "R&D Software Engineer"
             ],
             "label": "Orolia 2S (now Safran Trusted 4D)",
             "contract_type": "Full-time",
