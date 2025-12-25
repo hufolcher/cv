@@ -55,6 +55,7 @@
     "safran": {
       "roles": [
         "ingénieur système",
+        "R&D",
         "développement logiciel"
       ],
       "label": "Safran Electronics & Defense",
@@ -101,7 +102,7 @@
     },
     "orolia": {
       "roles": [
-        "ingénieur développement logiciel"
+        "ingénieur développement logiciel R&D"
       ],
       "label": "Orolia 2S (devenu Safran Trusted 4D)",
       "contract_type": "CDI",
