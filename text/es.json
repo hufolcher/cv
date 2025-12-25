@@ -53,7 +53,7 @@
         },
         "safran": {
             "roles": [
-                "Ingeniero de sistemas",
+                "Ingeniero de sistemas R&D",
                 "Desarrollo de software"
             ],
             "label": "Safran Electronics & Defense",
@@ -100,7 +100,7 @@
         },
         "orolia": {
             "roles": [
-                "Ingeniero de software"
+                "Ingeniero de software R&D"
             ],
             "label": "Orolia 2S (actualmente Safran Trusted 4D)",
             "contract_type": "Contrato indefinido",
