@@ -26,6 +26,12 @@
 // --- Translation
 #let translated = json(("text/", language, ".json").join())
 
+#let logos = (
+  cureety: (path: "images/institutions/cureety.png", width: 0.75cm),
+  safran: (path: "images/institutions/safran.jpg", width: 0.75cm),
+  orolia: (path: "images/institutions/orolia.jpg", width: 1.2cm),
+)
+
 // --- Document
 #box(
   fill: background_blue3,
@@ -99,49 +105,21 @@
     "icons/white/briefcase.png",
     translated.experiences.title,
   ),
-  stack(
-    dir: ttb,
-    experience(
-      "images/institutions/cureety.png",
-      0.75cm,
-      translated.experiences.cureety.roles,
-      translated.experiences.cureety.contract_type,
-      translated.experiences.cureety.label,
-      translated.experiences.cureety.date,
-      (
-        translated.experiences.cureety.projects.frontend,
-        translated.experiences.cureety.projects.backend,
-      ),
+  // Experiences and their projects render in the order of the translation file.
+  ..translated
+    .experiences
+    .pairs()
+    .filter(((key, _)) => key in logos)
+    .map(((key, company)) => experience(
+      logos.at(key).path,
+      logos.at(key).width,
+      company.roles,
+      company.contract_type,
+      company.label,
+      company.date,
+      company.projects.values(),
       translated.experiences.common,
-    ),
-    experience(
-      "images/institutions/safran.jpg",
-      0.75cm,
-      translated.experiences.safran.roles,
-      translated.experiences.safran.contract_type,
-      translated.experiences.safran.label,
-      translated.experiences.safran.date,
-      (
-        translated.experiences.safran.projects.beluga,
-        translated.experiences.safran.projects.cachalot,
-      ),
-      translated.experiences.common,
-    ),
-  ),
-  experience(
-    "images/institutions/orolia.jpg",
-    1.2cm,
-    translated.experiences.orolia.roles,
-    translated.experiences.orolia.contract_type,
-    translated.experiences.orolia.label,
-    translated.experiences.orolia.date,
-    (
-      translated.experiences.orolia.projects.artcard,
-      translated.experiences.orolia.projects.chaperon,
-      translated.experiences.orolia.projects.navkite,
-    ),
-    translated.experiences.common,
-  ),
+    )),
 )
 
 #pagebreak()
