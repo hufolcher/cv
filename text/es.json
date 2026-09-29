@@ -1,272 +1,270 @@
 {
-    "job_title": "Ingeniero de Software",
-    "intro": "Apasionado por la ciencia y la tecnología, mi formación y experiencia profesional me han hecho una persona rigurosa, eficaz y versátil.",
-    "experiences": {
-        "title": "experiencia profesional",
-        "common": {
-            "skill_title": "Competencias"
-        },
-        "cureety": {
-            "roles": [
-                "Ingeniero de software fullstack"
-            ],
-            "label": "Cureety",
-            "contract_type": "Contrato indefinido",
-            "date": "Abril 2025 - Actualidad",
-            "projects": {
-                "frontend": {
-                    "label": "Front-end",
-                    "description": "Cureety es una plataforma SaaS de telesupervisión en oncología: los pacientes completan cuestionarios en función de su patología y tratamiento, permitiendo el seguimiento automatizado de su estado clínico. Los profesionales sanitarios disponen de una aplicación web dedicada para la gestión y supervisión de los pacientes.",
-                    "tasks": [
-                        "Desarrollo de nuevas interfaces y funcionalidades, y migración progresiva de las existentes hacia aplicaciones unificadas basadas en Flutter (aplicaciones móviles Android & iOS, interfaz web para personal sanitario, interfaz web paciente y backoffice).",
-                        "Mantenimiento y evolución de las interfaces web existentes en React/NextJS (panel sanitario y backoffice)."
-                    ],
-                    "stack": [
-                        "Dart/Flutter/Riverpod",
-                        "JavaScript/TypeScript/React",
-                        "Jenkins",
-                        "GitLab"
-                    ]
-                },
-                "backend": {
-                    "label": "Back-end",
-                    "description": "Cureety se encuentra en una etapa de fuerte crecimiento y necesita escalar sus servicios backend sin comprometer la continuidad del servicio.",
-                    "tasks": [
-                        "Migración progresiva (endpoint por endpoint) de los backends existentes a Rust para mejorar rendimiento, fiabilidad y mantenibilidad.",
-                        "Optimización de esquemas y consultas en PostgreSQL.",
-                        "Pruebas end-to-end de nuevos servicios en Rust con simulación de dependencias externas.",
-                        "Mantenimiento de los backends existentes basados en LoopbackJS."
-                    ],
-                    "stack": [
-                        "Rust/ActixWeb/Sqlx",
-                        "PostgreSQL",
-                        "API REST",
-                        "JavaScript/TypeScript",
-                        "NodeJS",
-                        "LoopbackJS",
-                        "Docker",
-                        "Jenkins",
-                        "GitLab"
-                    ]
-                }
-            }
-        },
-        "safran": {
-            "roles": [
-                "Ingeniero de sistemas R&D",
-                "Desarrollo de software"
-            ],
-            "label": "Safran Electronics & Defense",
-            "contract_type": "Contrato indefinido",
-            "date": "Marzo 2023 - Abril 2025",
-            "projects": {
-                "beluga": {
-                    "label": "Sistema de Tiempo y Frecuencia de Alta Precisión para Naval Group",
-                    "description": "Sistema autónomo de referencia temporal de alta precisión capaz de distribuir señales en múltiples formatos eléctricos y digitales dentro de un entorno embarcado con componentes electrónicos específicos, FPGA y software embebido.",
-                    "tasks": [
-                        "Diseño de alto nivel del sistema (lógica funcional, mecanismos de sincronización y control).",
-                        "Desarrollo de software embebido en C sobre Linux (planificación de tareas, control de FPGAs y placas electrónicas dedicadas, TCP/IP seguro con SSL, base de datos PostgreSQL, comunicación UART).",
-                        "Interfaz de usuario compleja en Python Qt sobre Linux (interacción con el sistema, comunicación segura, almacenamiento en PostgreSQL).",
-                        "Simulación completa del sistema (comportamientos físicos y señal) mediante Python Qt para pruebas automatizadas y formación.",
-                        "Diseño UI/UX en colaboración con el cliente final.",
-                        "Coordinación técnica de la parte software, comunicación con cliente y revisiones de diseño.",
-                        "Generación automática de documentación técnica mediante Typst."
-                    ],
-                    "stack": [
-                        "C",
-                        "Python",
-                        "PyQt/PySide",
-                        "PostgreSQL",
-                        "Docker",
-                        "GitLab"
-                    ]
-                },
-                "cachalot": {
-                    "label": "Mantenimiento del Sistema de Tiempo y Frecuencia Histórico para Naval Group",
-                    "description": "Mantenimiento y reingeniería del sistema predecesor tras varios años sin intervención, requiriendo análisis y comprensión profunda del código existente.",
-                    "tasks": [
-                        "Desarrollo en C sobre Linux (diagnóstico, corrección de errores, mejora de estabilidad).",
-                        "Desarrollo de un entorno de simulación (electrónica + FPGA + UART + interfaz) principalmente en Python para validar versiones del firmware."
-                    ],
-                    "stack": [
-                        "C",
-                        "Python",
-                        "PyQt/PySide",
-                        "VirtualBox",
-                        "GitLab"
-                    ]
-                }
-            }
-        },
-        "orolia": {
-            "roles": [
-                "Ingeniero de software R&D"
-            ],
-            "label": "Orolia 2S (actualmente Safran Trusted 4D)",
-            "contract_type": "Contrato indefinido",
-            "date": "Enero 2022 - Marzo 2023",
-            "projects": {
-                "artcard": {
-                    "label": "Tarjeta de Tiempo con Referencia Atómica (ARTCARD)",
-                    "description": "Desarrollada en colaboración con Meta como proyecto open-source, integrando FPGA, receptor GNSS (Ublox) y un reloj atómico miniaturizado (MRO50) para sincronización en datacenters.",
-                    "tasks": [
-                        "Software de control disciplinado GNSS en C, desarrollo y soporte open-source (https://github.com/Orolia2s/oscillatord).",
-                        "Banco de programación y pruebas para producción (flash de FTDI, FPGA y EEPROM) con interfaz de operador.",
-                        "Contribución al driver Linux open-source integrado en el kernel (https://github.com/Time-Appliances-Project/Time-Card).",
-                        "Prototipado y experimentación mediante modificaciones internas del driver."
-                    ],
-                    "stack": [
-                        "C",
-                        "Python",
-                        "PyQt/PySide"
-                    ]
-                },
-                "chaperon": {
-                    "label": "Software de Simulación GNSS para Aplicaciones Críticas (Skydel)",
-                    "description": "Desarrollo para simulación y modificación de señales GNSS en aplicaciones de defensa (contramedidas anti-spoofing para drones).",
-                    "tasks": [
-                        "Extensión de software civil de simulación GNSS para uso en defensa (C++17, Qt, criptografía).",
-                        "Backend en C++ para exposición de API a interfaces de control y monitoreo.",
-                        "Integración en sistemas complejos y demostraciones a clientes."
-                    ],
-                    "stack": [
-                        "C++17",
-                        "C++20",
-                        "Qt",
-                        "GitLab"
-                    ]
-                },
-                "navkite": {
-                    "label": "Sistema de Navegación Resiliente (NavKite)",
-                    "description": "Prototipo combinando navegación inercial con receptor GNSS detector de spoofing, posteriormente industrializado como producto de defensa.",
-                    "tasks": [
-                        "Desarrollo backend en Python con exposición de API web y lógica de navegación segura.",
-                        "Prototipado rápido seguido de ciclos de mejora continua.",
-                        "Demostraciones de campo a fuerzas armadas.",
-                        "Industrialización incluyendo empaquetado de sistema Linux basado en Buildroot."
-                    ],
-                    "stack": [
-                        "Python/Gunicorn/Socketio",
-                        "React",
-                        "Docker",
-                        "Buildroot"
-                    ]
-                }
-            }
-        }
+  "job_title": "Ingeniero de Software de Sistemas Críticos y Embebidos",
+  "intro": "Tres años en Safran en sistemas embebidos críticos de defensa (C, Linux, FPGA, redes seguras) y después líder de la reescritura del backend en Rust en Cureety.",
+  "experiences": {
+    "title": "experiencia profesional",
+    "common": {
+      "skill_title": "Competencias"
     },
-    "education": {
-        "title": "formación",
-        "list": [
-            {
-                "logo": "minesstetienne.png",
-                "label": "École Nationale Supérieure des Mines de Saint-Étienne",
-                "date": "2018 - 2021",
-                "steps": [
-                    {
-                        "location": "Campus Georges Charpak Provence - Gardanne, 13120",
-                        "details": [
-                            "Programa de Ingeniería ISMIN (Microelectrónica e Informática)",
-                            "Especialización en diseño de microchips",
-                            "Orientación tecnológica: Tecnologías de la Información y Cadena de Suministro"
-                        ]
-                    }
-                ]
-            },
-            {
-                "logo": "montaigne.png",
-                "label": "classe préparatoire aux grandes écoles (MPSI-MP*)",
-                "date": "2015 - 2018",
-                "steps": [
-                    {
-                        "location": "Lycée Montaigne - Bordeaux, 33000",
-                        "details": [
-                            "MPSI-MP* - Opción Informática / 2015 - 2017"
-                        ]
-                    },
-                    {
-                        "location": "Lycée Godefroy de Bouillon - Clermont-Ferrand, 63000",
-                        "details": [
-                            "MP - Opción Informática / 2017 - 2018"
-                        ]
-                    }
-                ]
-            },
-            {
-                "logo": "charles_gide.jpg",
-                "label": "Bachillerato Científico con Mención de Honor",
-                "date": "2015",
-                "steps": [
-                    {
-                        "location": "Lycée Charles Gide - Uzès, 30700",
-                        "details": []
-                    }
-                ]
-            }
-        ]
-    },
-    "skills": {
-        "title": "competencias",
-        "programming_languages_label": "Lenguajes de programación",
-        "programming_tools_label": "Frameworks / Herramientas",
-        "languages": [
-            "Python",
-            "C",
-            "Rust",
-            "C++",
-            "SQL",
-            "Dart",
-            "JavaScript",
-            "TypeScript",
-            "Bash"
-        ],
-        "tools": [
-            "Sistemas UNIX",
-            "Comandos POSIX",
-            "Git",
-            "GitLab",
-            "GitHub",
-            "Bitbucket",
-            "Wireshark",
-            "VirtualBox",
-            "Nix Package Manager",
-            "Qt (C++)",
-            "PySide / PyQt",
+    "cureety": {
+      "roles": [
+        "Ingeniero de software fullstack senior"
+      ],
+      "label": "Cureety",
+      "contract_type": "Contrato indefinido",
+      "date": "Abril 2025 - Agosto 2026",
+      "projects": {
+        "backend": {
+          "label": "Back-end — líder de la reescritura en Rust",
+          "description": "SaaS de telemonitorización en oncología: seguimiento diario de los pacientes mediante cuestionarios adaptados a su tratamiento. Plataforma en fuerte crecimiento, sin margen para interrupciones de servicio.",
+          "tasks": [
+            "Lideré la reescritura de los backends Node en Rust, endpoint por endpoint y sin interrupción del servicio; elección basada en mi experiencia en sistemas embebidos (rendimiento, fiabilidad).",
+            "Migraciones y optimización del esquema y las consultas PostgreSQL.",
+            "Tests end-to-end de los servicios Rust, con servicios externos simulados.",
+            "Mantenimiento de los backends LoopbackJS existentes."
+          ],
+          "stack": [
+            "Rust/Actix Web/SQLx",
             "PostgreSQL",
-            "Sqlx",
-            "ActixWeb",
-            "Buildroot",
-            "Flutter",
-            "Riverpod",
+            "REST",
+            "NodeJS/LoopbackJS",
+            "Claude Code"
+          ]
+        },
+        "infra": {
+          "label": "Infraestructura",
+          "description": "Servicios en contenedores alojados en AWS y GCP.",
+          "tasks": [
+            "Despliegue y operación de los servicios, integración continua con Jenkins."
+          ],
+          "stack": [
+            "AWS",
+            "GCP",
+            "Docker",
+            "Jenkins",
+            "GitLab"
+          ]
+        },
+        "frontend": {
+          "label": "Front-end",
+          "description": "Aplicaciones para pacientes y profesionales sanitarios, móvil y web.",
+          "tasks": [
+            "Migración progresiva de las interfaces React/NextJS a Flutter (Android, iOS, web) y nuevas funcionalidades."
+          ],
+          "stack": [
+            "Dart/Flutter/Riverpod",
+            "TypeScript/React"
+          ]
+        }
+      }
+    },
+    "safran": {
+      "roles": [
+        "Ingeniero de sistemas R&D",
+        "Desarrollo de software"
+      ],
+      "label": "Safran (antes Orolia 2S)",
+      "contract_type": "Contrato indefinido",
+      "date": "Enero 2022 - Abril 2025",
+      "projects": {
+        "beluga": {
+          "label": "Sistema de tiempo y frecuencia embebido — Naval Group",
+          "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software).",
+          "tasks": [
+            "Diseño de sistema: lógica de negocio, lazos de regulación.",
+            "Software embebido C/Linux: planificación, control de las FPGA y tarjetas dedicadas, UART, TCP/IP sobre SSL, PostgreSQL.",
+            "IHM de operador en Python/Qt (TCP/IP sobre SSL, PostgreSQL), pantallas y procedimientos diseñados con el cliente final.",
+            "Simulador completo del sistema (Python/Qt) para la automatización de pruebas y la formación de operadores.",
+            "Responsable de software del proyecto: revisiones y relación con el cliente.",
+            "Documentación e informes técnicos generados automáticamente (Typst)."
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide",
+            "PostgreSQL",
+            "Docker",
+            "GitLab"
+          ]
+        },
+        "navkite": {
+          "label": "Unidad de navegación resiliente (NavKite)",
+          "description": "Central inercial acoplada a un receptor GNSS que detecta señales maliciosas: del prototipo a un producto del catálogo de Safran Electronics & Defense.",
+          "tasks": [
+            "Backend en Python: adquisición y control de la central inercial, protección frente a señales maliciosas, API para la interfaz web.",
+            "Prueba de concepto en pocas semanas, después mejora continua y demostraciones sobre el terreno.",
+            "Industrialización: empaquetado y sistema Linux a medida (Buildroot)."
+          ],
+          "stack": [
+            "Python/Gunicorn/Socketio",
             "React",
             "Docker",
-            "Podman",
-            "Grafana",
-            "SQLAlchemy",
-            "Typst",
-            "Jenkins",
-            "Uv",
-            "Valgrind",
-            "GDB",
-            "Yocto",
-            "OpenGL"
-        ]
-    },
-    "languages": {
-        "title": "idiomas",
-        "list": [
-            {
-                "label": "Francés",
-                "level": "Nativo"
-            },
-            {
-                "label": "Inglés",
-                "level": "Profesional"
-            },
-            {
-                "label": "Español",
-                "level": "Intermedio"
-            }
-        ]
+            "Buildroot"
+          ]
+        },
+        "chaperon": {
+          "label": "Simulación GNSS para una aplicación de defensa (Skydel)",
+          "description": "Prototipo de engaño de drones mediante la emisión de señales GNSS modificadas.",
+          "tasks": [
+            "Adaptación de un simulador civil a un uso de defensa crítico (C++17, Qt, cifrado).",
+            "Backend C++ de supervisión y control del sistema completo (simulador, hardware), expuesto como API.",
+            "Integración con otros sistemas y demostraciones a clientes."
+          ],
+          "stack": [
+            "C++17",
+            "C++20",
+            "Qt",
+            "GitLab"
+          ]
+        },
+        "artcard": {
+          "label": "Tarjeta de tiempo con referencia atómica (ARTCARD)",
+          "description": "Tarjeta de código abierto co-desarrollada con Meta para centros de datos: FPGA, receptor GNSS u-blox, microrreloj atómico MRO50.",
+          "tasks": [
+            "Sincronización del reloj con GNSS en C, desarrollo y soporte de código abierto (github.com/Orolia2s/oscillatord).",
+            "Contribución al driver Linux de código abierto, hoy integrado en el kernel (github.com/Time-Appliances-Project/Time-Card); fork interno para prototipos.",
+            "Banco de programación (FTDI, FPGA, EEPROM) y de pruebas, con IHM de operador para la producción en el EMS AsteelFlash."
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide"
+          ]
+        },
+        "cachalot": {
+          "label": "Mantenimiento del sistema de tiempo y frecuencia anterior — Naval Group",
+          "description": "Sistema predecesor sin intervenciones durante años: conocimiento perdido, trabajo de ingeniería inversa.",
+          "tasks": [
+            "Auditoría y corrección del código C/Linux del calculador.",
+            "Simulación del entorno electrónico y FPGA (Python/Qt, UART) para validar las versiones de software."
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide",
+            "VirtualBox",
+            "GitLab"
+          ]
+        }
+      }
     }
+  },
+  "education": {
+    "title": "formación",
+    "list": [
+      {
+        "logo": "minesstetienne.png",
+        "label": "École Nationale Supérieure des Mines de Saint-Étienne",
+        "date": "2018 - 2021",
+        "steps": [
+          {
+            "location": "Campus Georges Charpak Provence - Gardanne, 13120",
+            "details": [
+              "Programa de Ingeniería ISMIN (Microelectrónica e Informática)",
+              "Especialización en diseño de microchips",
+              "Orientación tecnológica: Tecnologías de la Información y Cadena de Suministro"
+            ]
+          }
+        ]
+      },
+      {
+        "logo": "montaigne.png",
+        "label": "classe préparatoire aux grandes écoles (MPSI-MP*)",
+        "date": "2015 - 2018",
+        "steps": [
+          {
+            "location": "Lycée Montaigne - Bordeaux, 33000",
+            "details": [
+              "MPSI-MP* - Opción Informática / 2015 - 2017"
+            ]
+          },
+          {
+            "location": "Lycée Godefroy de Bouillon - Clermont-Ferrand, 63000",
+            "details": [
+              "MP - Opción Informática / 2017 - 2018"
+            ]
+          }
+        ]
+      },
+      {
+        "logo": "charles_gide.jpg",
+        "label": "Bachillerato Científico con Mención de Honor",
+        "date": "2015",
+        "steps": [
+          {
+            "location": "Lycée Charles Gide - Uzès, 30700",
+            "details": []
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "competencias",
+    "programming_languages_label": "Lenguajes de programación",
+    "programming_tools_label": "Frameworks / Herramientas",
+    "languages": [
+      "C",
+      "C++",
+      "Rust",
+      "Python",
+      "SQL",
+      "Bash",
+      "TypeScript",
+      "JavaScript",
+      "Dart"
+    ],
+    "tools": [
+      "Linux/UNIX",
+      "POSIX",
+      "TCP/IP (SSL/TLS)",
+      "Git",
+      "GitLab",
+      "Github",
+      "Bitbucket",
+      "Jenkins",
+      "Docker",
+      "Podman",
+      "AWS",
+      "GCP",
+      "Yocto",
+      "Buildroot",
+      "GDB",
+      "Valgrind",
+      "Wireshark",
+      "VirtualBox",
+      "Nix",
+      "Qt (C++)",
+      "PySide/PyQt",
+      "PostgreSQL",
+      "SQLx",
+      "Actix Web",
+      "SQLAlchemy",
+      "Grafana",
+      "uv",
+      "Typst",
+      "OpenGL",
+      "Flutter",
+      "Riverpod",
+      "React",
+      "Claude Code"
+    ]
+  },
+  "languages": {
+    "title": "idiomas",
+    "list": [
+      {
+        "label": "Francés",
+        "level": "Nativo"
+      },
+      {
+        "label": "Inglés",
+        "level": "Profesional"
+      },
+      {
+        "label": "Español",
+        "level": "Intermedio"
+      }
+    ]
+  }
 }
