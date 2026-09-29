@@ -3,5 +3,7 @@
 #let blue = rgb("#1f4e95").desaturate(35%)
 #let grey = rgb(80, 80, 80)
 
-#let background_blue3 = rgb("#071829").desaturate(40%)
-#let background_blue2 = rgb("#113454").desaturate(40%)
+#let navy = rgb("#071829").desaturate(40%)
+#let navy-light = rgb("#113454").desaturate(40%)
+
+#let brand-gradient = gradient.linear(green, blue)
