@@ -67,7 +67,10 @@
   box(
     fill: navy,
     inset: (left: 40pt, right: 41pt, top: 15pt, bottom: 15pt),
-    align(left + horizon, grid(columns: (5cm, 1fr), photo, headline)),
+    align(left + horizon, grid(
+      columns: (5cm, 1fr),
+      photo, headline,
+    )),
   ),
   box(
     fill: brand-gradient,
