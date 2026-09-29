@@ -32,6 +32,21 @@
             "LoopbackJS",
             "Docker",
             "Jenkins",
+            "GitLab",
+            "Claude Code"
+          ]
+        },
+        "infra": {
+          "label": "Infrastructure",
+          "description": "Services hébergés sur AWS et GCP.",
+          "tasks": [
+            "Déploiement et exploitation des services conteneurisés sur AWS et GCP."
+          ],
+          "stack": [
+            "AWS",
+            "GCP",
+            "Docker",
+            "Jenkins",
             "GitLab"
           ]
         },
@@ -227,6 +242,8 @@
       "Flutter",
       "Riverpod",
       "React",
+      "AWS",
+      "GCP",
       "Docker",
       "Podman",
       "Grafana",
@@ -237,7 +254,8 @@
       "Valgrind",
       "GDB",
       "Yocto",
-      "OpenGL"
+      "OpenGL",
+      "Claude Code"
     ]
   },
   "languages": {
