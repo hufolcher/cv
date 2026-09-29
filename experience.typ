@@ -1,8 +1,8 @@
 #import "header.typ": *
 
-// One project: bold title, then an indented description, its tasks and its stack as tags.
+// One project: bold title, then an indented description, its tasks and its stack.
 // `project` is a translation-file entry: (label, description, tasks, stack).
-#let project(project) = box(
+#let project(project, stack-label) = box(
   inset: (left: 20pt, right: 10pt, top: 7pt, bottom: 4pt),
   stack(
     dir: ttb,
@@ -16,7 +16,7 @@
         dir: ttb,
         spacing: 12pt,
         list(spacing: 7pt, ..project.tasks),
-        tags(project.stack),
+        text(size: 9.5pt, labelled-list(stack-label, project.stack)),
       ),
     )),
   ),
@@ -24,7 +24,7 @@
 
 // One employer: logo header (roles, contract, company, dates) followed by its projects.
 // `company` is a translation-file entry: (roles, contract_type, label, date, projects).
-#let experience(logo, logo-width, company) = block(
+#let experience(logo, logo-width, company, stack-label) = block(
   inset: (left: 14pt, right: 8pt, bottom: 15pt),
   breakable: true,
   stack(
@@ -36,6 +36,6 @@
       upper(company.roles.join(" / ")),
       upper[#company.contract_type | #company.label | #company.date],
     ),
-    ..company.projects.values().map(project),
+    ..company.projects.values().map(p => project(p, stack-label)),
   ),
 )

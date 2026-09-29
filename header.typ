@@ -1,19 +1,10 @@
 #import "color.typ": *
 
-// Technologies as monospace tags. DejaVu Sans Mono ships inside typst, so CI needs no extra font.
-#let tags(items) = {
-  set text(font: "DejaVu Sans Mono", size: 7.5pt, fill: blue)
-  set par(justify: false, leading: 7pt)
-  items
-    .map(item => box(
-      fill: blue.lighten(92%),
-      stroke: 0.5pt + blue.lighten(65%),
-      radius: 3pt,
-      inset: (x: 4pt, y: 2.5pt),
-      item,
-    ))
-    .join(" ")
-}
+// A bold label followed by a comma-separated list, for tech stacks and skills.
+#let labelled-list(
+  label,
+  items,
+) = [#text(weight: "bold", label): #items.join(", ")]
 
 // Section title with a gradient rule and a round icon, followed by its items.
 #let section(icon, title, spacing: 4pt, ..items) = stack(

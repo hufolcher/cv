@@ -93,6 +93,7 @@
       logos.at(key).path,
       logos.at(key).width,
       company,
+      translated.experiences.common.skill_title,
     )),
 )
 
@@ -135,10 +136,14 @@
   box(inset: (left: 25pt, right: 20pt), stack(
     dir: ttb,
     spacing: 7pt,
-    text(weight: "bold", translated.skills.programming_languages_label),
-    tags(translated.skills.languages),
-    text(weight: "bold", translated.skills.programming_tools_label),
-    tags(translated.skills.tools),
+    labelled-list(
+      translated.skills.programming_languages_label,
+      translated.skills.languages,
+    ),
+    labelled-list(
+      translated.skills.programming_tools_label,
+      translated.skills.tools,
+    ),
   )),
 )
 
