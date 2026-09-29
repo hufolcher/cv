@@ -167,8 +167,10 @@
     #stack(
       dir: ttb,
       spacing: 7pt,
-      [#text(weight: "bold")[#translated.skills.programming_languages_label]: #translated.skills.languages.join(", ")],
-      [#text(weight: "bold")[#translated.skills.programming_tools_label]: #translated.skills.tools.join(", ")],
+      text(weight: "bold")[#translated.skills.programming_languages_label],
+      tags(translated.skills.languages),
+      text(weight: "bold")[#translated.skills.programming_tools_label],
+      tags(translated.skills.tools),
     )],
 )
 

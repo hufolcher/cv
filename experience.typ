@@ -51,8 +51,7 @@
               spacing: 7pt,
               ..steps,
             ),
-            text(size: 9.5pt, weight: "bold")[
-              #translated.skill_title: #skills.join(", ")],
+            tags(skills),
           ),
         )],
     )]

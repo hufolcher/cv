@@ -1,6 +1,20 @@
 #import "color.typ": *
 
 
+// Technologies as monospace tags. DejaVu Sans Mono ships inside typst, so CI needs no extra font.
+#let tags(items) = {
+  set text(font: "DejaVu Sans Mono", size: 7.5pt, fill: blue)
+  set par(justify: false, leading: 7pt)
+  items
+    .map(item => box(
+      fill: blue.lighten(92%),
+      stroke: 0.5pt + blue.lighten(65%),
+      radius: 3pt,
+      inset: (x: 4pt, y: 2.5pt),
+    )[#item])
+    .join(" ")
+}
+
 #let category_header(image_path, label) = {
   block(inset: (left: 14pt, right: 15pt))[
     #align(horizon)[
