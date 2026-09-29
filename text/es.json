@@ -69,7 +69,7 @@
       "projects": {
         "beluga": {
           "label": "Sistema de tiempo y frecuencia embebido — Naval Group",
-          "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software).",
+          "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software). Equipo multidisciplinar de 2 a 5 personas (software, electrónica, FPGA, mecánica, IVVQ).",
           "tasks": [
             "Diseño de sistema: lógica de negocio, lazos de regulación.",
             "Software embebido C/Linux: planificación, control de las FPGA y tarjetas dedicadas, UART, TCP/IP sobre SSL, PostgreSQL.",

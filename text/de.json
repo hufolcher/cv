@@ -70,7 +70,7 @@
       "projects": {
         "beluga": {
           "label": "Eingebettetes Zeit- und Frequenzsystem — Naval Group",
-          "description": "Autonome Hochpräzisionsuhr, die die Zeit in zahlreichen elektrischen und digitalen Formaten verteilt, in einer stark eingeschränkten Umgebung (dedizierte Elektronik, FPGA, Software).",
+          "description": "Autonome Hochpräzisionsuhr, die die Zeit in zahlreichen elektrischen und digitalen Formaten verteilt, in einer stark eingeschränkten Umgebung (dedizierte Elektronik, FPGA, Software). Interdisziplinäres Team von 2 bis 5 Personen (Software, Elektronik, FPGA, Mechanik, IVVQ).",
           "tasks": [
             "Systementwurf: Geschäftslogik, Regelkreise.",
             "Embedded-Software in C/Linux: Ablaufsteuerung, Ansteuerung der FPGAs und dedizierten Platinen, UART, TCP/IP über SSL, PostgreSQL.",

@@ -69,7 +69,7 @@
       "projects": {
         "beluga": {
           "label": "Embedded time & frequency system — Naval Group",
-          "description": "Autonomous high-precision clock distributing time in many electrical and digital formats, in a constrained environment (dedicated electronics, FPGA, software).",
+          "description": "Autonomous high-precision clock distributing time in many electrical and digital formats, in a constrained environment (dedicated electronics, FPGA, software). Multidisciplinary team of 2 to 5 (software, electronics, FPGA, mechanics, IVVQ).",
           "tasks": [
             "System design: business logic, servo loops.",
             "Embedded C/Linux software: scheduling, control of the FPGAs and dedicated boards, UART, TCP/IP over SSL, PostgreSQL.",

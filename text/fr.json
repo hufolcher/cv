@@ -70,7 +70,7 @@
       "projects": {
         "beluga": {
           "label": "Système temps-fréquence embarqué — Naval Group",
-          "description": "Horloge de haute précision autonome, distribuant le temps sous de nombreux formats électriques et numériques, en environnement contraint (électronique dédiée, FPGA, logiciel).",
+          "description": "Horloge de haute précision autonome, distribuant le temps sous de nombreux formats électriques et numériques, en environnement contraint (électronique dédiée, FPGA, logiciel). Équipe pluridisciplinaire de 2 à 5 personnes (logiciel, électronique, FPGA, mécanique, IVVQ).",
           "tasks": [
             "Conception système : logique métier, boucles d'asservissement.",
             "Logiciel embarqué C/Linux : ordonnancement, pilotage des FPGA et cartes dédiées, UART, TCP/IP sur SSL, PostgreSQL.",
