@@ -1,6 +1,7 @@
-#let green = rgb("#31a269")
-#let blue = rgb("#1f4e95")
+// Brand hues, muted for a sober print look. Tune the percentages, not the hex codes.
+#let green = rgb("#31a269").desaturate(45%)
+#let blue = rgb("#1f4e95").desaturate(35%)
 #let grey = rgb(80, 80, 80)
 
-#let background_blue3 = rgb("#071829")
-#let background_blue2 = rgb("#113454")
+#let background_blue3 = rgb("#071829").desaturate(40%)
+#let background_blue2 = rgb("#113454").desaturate(40%)
