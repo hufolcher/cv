@@ -75,8 +75,9 @@
             "Conception système : logique métier, boucles d'asservissement.",
             "Logiciel embarqué C/Linux : ordonnancement, pilotage des FPGA et cartes dédiées, UART, TCP/IP sur SSL, PostgreSQL.",
             "IHM métier Python/Qt (TCP/IP sur SSL, PostgreSQL), écrans et procédures conçus avec le client final.",
+            "Conception et code conformes aux exigences de cybersécurité de Naval Group.",
             "Simulateur complet du système (Python/Qt) pour l'automatisation des tests et la formation des opérateurs.",
-            "Responsable logiciel du projet : revues et relation client.",
+            "Responsable logiciel : rédaction de la documentation technique et défense des choix de conception en revue devant les experts Naval Group.",
             "Documentation et rapports techniques générés automatiquement (Typst)."
           ],
           "stack": [

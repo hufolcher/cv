@@ -74,8 +74,9 @@
             "Diseño de sistema: lógica de negocio, lazos de regulación.",
             "Software embebido C/Linux: planificación, control de las FPGA y tarjetas dedicadas, UART, TCP/IP sobre SSL, PostgreSQL.",
             "IHM de operador en Python/Qt (TCP/IP sobre SSL, PostgreSQL), pantallas y procedimientos diseñados con el cliente final.",
+            "Diseño y código conformes a los requisitos de ciberseguridad de Naval Group.",
             "Simulador completo del sistema (Python/Qt) para la automatización de pruebas y la formación de operadores.",
-            "Responsable de software del proyecto: revisiones y relación con el cliente.",
+            "Responsable de software: redacción de la documentación técnica y defensa de las decisiones de diseño en revisiones con los expertos de Naval Group.",
             "Documentación e informes técnicos generados automáticamente (Typst)."
           ],
           "stack": [

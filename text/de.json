@@ -75,8 +75,9 @@
             "Systementwurf: Geschäftslogik, Regelkreise.",
             "Embedded-Software in C/Linux: Ablaufsteuerung, Ansteuerung der FPGAs und dedizierten Platinen, UART, TCP/IP über SSL, PostgreSQL.",
             "Bedienoberfläche in Python/Qt (TCP/IP über SSL, PostgreSQL), Bildschirme und Abläufe mit dem Endkunden entworfen.",
+            "Entwurf und Code konform zu den Cybersecurity-Anforderungen von Naval Group.",
             "Vollständiger Systemsimulator (Python/Qt) für Testautomatisierung und Bedienerschulung.",
-            "Software-Verantwortlicher des Projekts: Reviews und Kundenbeziehung.",
+            "Software-Verantwortlicher: technische Dokumentation verfasst und Designentscheidungen in Reviews mit den Experten von Naval Group vertreten.",
             "Automatisch erzeugte technische Dokumentation und Berichte (Typst)."
           ],
           "stack": [
