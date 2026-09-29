@@ -58,9 +58,9 @@
         "R&D",
         "développement logiciel"
       ],
-      "label": "Safran Electronics & Defense",
+      "label": "Safran (ex-Orolia 2S)",
       "contract_type": "CDI",
-      "date": "Mars 2023 - Avril 2025",
+      "date": "Jan 2022 - Avril 2025",
       "projects": {
         "beluga": {
           "label": "Système Temps Fréquence pour Naval Group",
@@ -83,44 +83,20 @@
             "GitLab"
           ]
         },
-        "cachalot": {
-          "label": "Maintenance du Système Temps Fréquence historique pour Naval Group",
-          "description": "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+        "navkite": {
+          "label": "Caisson de Navigation Resiliente (NavKite)",
+          "description": "D'abord un prototype alliant la précision d'une centrale inertielle à la détection de signaux GNSS malveillant d'un récepteur intelligent puis rapidement un produit au catalogue Safran Electronics & Defense. A la pointe de l'innovation en navigation militaire résiliente.",
           "tasks": [
-            "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
-            "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python)."
+            "Développement, déploiement & intégration au sein d'un système existant d'un logiciel backend (Python) qui récupère des données d'une centrale inertielle, la protège des signaux malveillants, la pilote et expose ses fonctionnalités à une interface web (React).",
+            "Prototypage rapide, POC en quelques semaines/mois puis amélioration continue.",
+            "Démonstrations clients sur le terrain",
+            "Industrialisation de la partie logicielle (packaging & OS linux custom avec buildroot)"
           ],
           "stack": [
-            "C",
-            "Python",
-            "PyQt/PySide",
-            "VirtualBox",
-            "GitLab"
-          ]
-        }
-      }
-    },
-    "orolia": {
-      "roles": [
-        "ingénieur développement logiciel R&D"
-      ],
-      "label": "Orolia 2S (devenu Safran Trusted 4D)",
-      "contract_type": "CDI",
-      "date": "Jan 2022 - Mars 2023",
-      "projects": {
-        "artcard": {
-          "label": "Carte de temps à référence atomique (ARTCARD)",
-          "description": "Co-développée en open source avec Meta, il s'agit d'une carte embarquant un FPGA, un récepteur GNSS (Ublox) & une micro-horloge atomique (MRO50) à destination des datacenters.",
-          "tasks": [
-            "Logiciel d'asservissement de l'horloge sur une source GNSS (Langage C), développement & support open source (Accessible ici: https://github.com/Orolia2s/oscillatord).",
-            "Banc de programmation électronique (flash d'un FTDI, du FPGA et d'une EEPROM), de tests & IHM associée pour que cela puisse être fait par un opérateur en usine (EMS AsteelFlash).",
-            "Participation au développement du driver linux spécifique open source, désormais intégré dans le kernel linux (Accessible ici: https://github.com/Time-Appliances-Project/Time-Card).",
-            "Développements sur le fork interne du driver linux afin d'expérimenter diverses intégrations pour des prototypes"
-          ],
-          "stack": [
-            "C",
-            "Python",
-            "PyQt/PySide"
+            "Python/Gunicorn/Socketio",
+            "React",
+            "Docker",
+            "Buildroot"
           ]
         },
         "chaperon": {
@@ -138,20 +114,34 @@
             "GitLab"
           ]
         },
-        "navkite": {
-          "label": "Caisson de Navigation Resiliente (NavKite)",
-          "description": "D'abord un prototype alliant la précision d'une centrale inertielle à la détection de signaux GNSS malveillant d'un récepteur intelligent puis rapidement un produit au catalogue Safran Electronics & Defense. A la pointe de l'innovation en navigation militaire résiliente.",
+        "artcard": {
+          "label": "Carte de temps à référence atomique (ARTCARD)",
+          "description": "Co-développée en open source avec Meta, il s'agit d'une carte embarquant un FPGA, un récepteur GNSS (Ublox) & une micro-horloge atomique (MRO50) à destination des datacenters.",
           "tasks": [
-            "Développement, déploiement & intégration au sein d'un système existant d'un logiciel backend (Python) qui récupère des données d'une centrale inertielle, la protège des signaux malveillants, la pilote et expose ses fonctionnalités à une interface web (React).",
-            "Prototypage rapide, POC en quelques semaines/mois puis amélioration continue.",
-            "Démonstrations clients sur le terrain",
-            "Industrialisation de la partie logicielle (packaging & OS linux custom avec buildroot)"
+            "Logiciel d'asservissement de l'horloge sur une source GNSS (Langage C), développement & support open source (Accessible ici: https://github.com/Orolia2s/oscillatord).",
+            "Banc de programmation électronique (flash d'un FTDI, du FPGA et d'une EEPROM), de tests & IHM associée pour que cela puisse être fait par un opérateur en usine (EMS AsteelFlash).",
+            "Participation au développement du driver linux spécifique open source, désormais intégré dans le kernel linux (Accessible ici: https://github.com/Time-Appliances-Project/Time-Card).",
+            "Développements sur le fork interne du driver linux afin d'expérimenter diverses intégrations pour des prototypes"
           ],
           "stack": [
-            "Python/Gunicorn/Socketio",
-            "React",
-            "Docker",
-            "Buildroot"
+            "C",
+            "Python",
+            "PyQt/PySide"
+          ]
+        },
+        "cachalot": {
+          "label": "Maintenance du Système Temps Fréquence historique pour Naval Group",
+          "description": "Travail autour de la maintenance du système prédécesseur de celui que j'ai été par la suite amené à developper. Apres de nombreuses années sans intervention, la compétence a été perdue et je me suis bien souvent retrouvé dans une démarche de rétro-ingénierie.",
+          "tasks": [
+            "Logiciel en C (OS Linux) (Etat des lieux du code du calculateur, compréhension du fonctionnement, correction de défauts logiciels).",
+            "Développement d'une solution de simulation de l'environnement électronique & FPGA afin de tester/valider les versions logicielles. Moteur de simulation, communication UART & interface avec le framework Qt (Principalement en python)."
+          ],
+          "stack": [
+            "C",
+            "Python",
+            "PyQt/PySide",
+            "VirtualBox",
+            "GitLab"
           ]
         }
       }
