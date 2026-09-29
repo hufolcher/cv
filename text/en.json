@@ -15,7 +15,7 @@
       "date": "April 2025 - August 2026",
       "projects": {
         "backend": {
-          "label": "Back-end — Rust rewrite lead",
+          "label": "Back-end",
           "description": "Oncology remote-monitoring SaaS: patients are followed daily through questionnaires tailored to their treatment. Fast-growing platform where downtime is not an option.",
           "tasks": [
             "Led the endpoint-by-endpoint rewrite of the Node backends in Rust with zero downtime; a choice driven by my embedded background (performance, reliability).",

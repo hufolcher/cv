@@ -15,7 +15,7 @@
       "date": "April 2025 – August 2026",
       "projects": {
         "backend": {
-          "label": "Back-end — Lead der Neuentwicklung in Rust",
+          "label": "Back-end",
           "description": "SaaS für onkologisches Telemonitoring: tägliche Begleitung der Patienten über auf ihre Behandlung abgestimmte Fragebögen. Schnell wachsende Plattform, Ausfälle sind keine Option.",
           "tasks": [
             "Lead der Neuentwicklung der Node-Backends in Rust, Endpoint für Endpoint und ohne Ausfallzeit; eine Wahl aus meiner Embedded-Erfahrung (Performance, Zuverlässigkeit).",

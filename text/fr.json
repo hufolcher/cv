@@ -15,7 +15,7 @@
       "date": "Avril 2025 - Août 2026",
       "projects": {
         "backend": {
-          "label": "Back-end — lead de la réécriture Rust",
+          "label": "Back-end",
           "description": "SaaS de télésurveillance en oncologie : suivi quotidien des patients par questionnaires adaptés à leur traitement. Plateforme en forte croissance, sans interruption de service tolérée.",
           "tasks": [
             "Lead de la réécriture des backends Node en Rust, endpoint par endpoint et sans interruption de service ; choix porté par mon expérience de l'embarqué (performance, fiabilité).",
