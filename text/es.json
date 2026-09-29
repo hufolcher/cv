@@ -73,6 +73,7 @@
           "tasks": [
             "Diseño de sistema: lógica de negocio, lazos de regulación.",
             "Software embebido C/Linux: planificación, control de las FPGA y tarjetas dedicadas, UART, TCP/IP sobre SSL, PostgreSQL.",
+            "Ciclo en V, código C conforme a MISRA C, análisis estático con SonarQube.",
             "IHM de operador en Python/Qt (TCP/IP sobre SSL, PostgreSQL), pantallas y procedimientos diseñados con el cliente final.",
             "Diseño y código conformes a los requisitos de ciberseguridad de Naval Group.",
             "Simulador completo del sistema (Python/Qt) para la automatización de pruebas y la formación de operadores.",

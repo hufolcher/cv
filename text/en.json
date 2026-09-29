@@ -73,6 +73,7 @@
           "tasks": [
             "System design: business logic, servo loops.",
             "Embedded C/Linux software: scheduling, control of the FPGAs and dedicated boards, UART, TCP/IP over SSL, PostgreSQL.",
+            "V-cycle, MISRA C compliant code, SonarQube static analysis.",
             "Python/Qt operator HMI (TCP/IP over SSL, PostgreSQL), screens and procedures designed with the end customer.",
             "Design and code compliant with Naval Group cybersecurity requirements.",
             "Full system simulator (Python/Qt) for test automation and operator training.",
