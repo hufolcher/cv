@@ -22,6 +22,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Format typst sources, commit fixes to main
+        run: |
+          curl -fsSL -o /usr/local/bin/typstyle \
+            https://github.com/typstyle-rs/typstyle/releases/download/v0.15.1/typstyle-x86_64-unknown-linux-gnu
+          chmod +x /usr/local/bin/typstyle
+          typstyle -i *.typ
+
+          if git diff --quiet; then
+            echo "Sources already formatted"
+          else
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git commit -am "Format typst sources [skip ci]"
+            git push origin main
+          fi
+
       - name: Install Fontist
         uses: fontist/setup-fontist@v2
 
