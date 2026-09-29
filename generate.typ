@@ -60,8 +60,15 @@
               radius: 2.5cm,
               width: 3.7cm,
               height: 3.7cm,
-              image("images/me.jpeg", height: 3.7cm),
-            )
+            )[
+              #image("images/me.jpeg", height: 3.7cm)
+              // Tint laid over the photo to match the muted palette; the image file stays untouched.
+              #place(top + left, rect(
+                width: 100%,
+                height: 100%,
+                fill: background_blue2.transparentize(80%),
+              ))
+            ]
           ],
           stack(
             dir: ttb,
