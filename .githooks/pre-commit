@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Enable once per clone: git config core.hooksPath .githooks
+set -euo pipefail
+
+typstyle --check *.typ || { echo "typst sources not formatted: run 'typstyle -i *.typ'" >&2; exit 1; }
+
+out=$(mktemp -d)
+trap 'rm -rf "$out"' EXIT
+for lang in fr en es de; do
+  typst compile generate.typ "$out/cv_$lang.pdf" --input language="$lang"
+done
