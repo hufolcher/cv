@@ -42,9 +42,21 @@ typstyle -i generate.typ
 ```
 More at https://github.com/typstyle-rs/typstyle
 
+The pre-commit hook checks formatting and compiles every language. Enable it once per clone:
+
+```
+git config core.hooksPath .githooks
+```
+
+CI formats the sources too and pushes a fix commit to main when they are not formatted.
+
 ### Compile to PDF
 Finally, generate the resume:
 
 ```
 typst compile generate.typ my_resume.pdf
+```
+Language and address default to `configuration.json` and can be overridden per build:
+```
+typst compile generate.typ my_resume.pdf --input language=en --input address="Paris (75000)"
 ```
