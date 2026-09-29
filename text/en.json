@@ -16,10 +16,10 @@
       "projects": {
         "backend": {
           "label": "Back-end",
-          "description": "Oncology remote-monitoring SaaS: patients are followed daily through questionnaires tailored to their treatment. Fast-growing platform where downtime is not an option.",
+          "description": "Oncology remote-monitoring SaaS: patients are followed daily through questionnaires tailored to their treatment. Grew from 10,000 to 50,000 monitored patients during my time, in a team of 15.",
           "tasks": [
-            "Led the endpoint-by-endpoint rewrite of the Node backends in Rust with zero downtime; a choice driven by my embedded background (performance, reliability).",
-            "PostgreSQL migrations, schema and query optimisation.",
+            "Led the full rewrite of the Node backend in Rust, a choice driven by my embedded background: from an overloaded service restarted every 30 minutes to a stable backend while load grew fivefold.",
+            "PostgreSQL optimisation: schema, queries, migrations.",
             "End-to-end tests of the Rust services, with external services simulated.",
             "Maintenance of the existing LoopbackJS backends."
           ],

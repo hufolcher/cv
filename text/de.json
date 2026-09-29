@@ -16,10 +16,10 @@
       "projects": {
         "backend": {
           "label": "Back-end",
-          "description": "SaaS für onkologisches Telemonitoring: tägliche Begleitung der Patienten über auf ihre Behandlung abgestimmte Fragebögen. Schnell wachsende Plattform, Ausfälle sind keine Option.",
+          "description": "SaaS für onkologisches Telemonitoring: tägliche Begleitung der Patienten über auf ihre Behandlung abgestimmte Fragebögen. Wachstum von 10.000 auf 50.000 betreute Patienten in meiner Zeit, in einem Team von 15 Personen.",
           "tasks": [
-            "Lead der Neuentwicklung der Node-Backends in Rust, Endpoint für Endpoint und ohne Ausfallzeit; eine Wahl aus meiner Embedded-Erfahrung (Performance, Zuverlässigkeit).",
-            "PostgreSQL-Migrationen, Schema- und Query-Optimierung.",
+            "Lead der vollständigen Neuentwicklung des Node-Backends in Rust, eine Wahl aus meiner Embedded-Erfahrung: von einem überlasteten Dienst, der alle 30 Minuten neu gestartet wurde, zu einem stabilen Backend bei fünffacher Last.",
+            "PostgreSQL-Optimierung: Schema, Queries, Migrationen.",
             "End-to-End-Tests der Rust-Services mit simulierten externen Diensten.",
             "Wartung der bestehenden LoopbackJS-Backends."
           ],

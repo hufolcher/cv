@@ -16,10 +16,10 @@
       "projects": {
         "backend": {
           "label": "Back-end",
-          "description": "SaaS de télésurveillance en oncologie : suivi quotidien des patients par questionnaires adaptés à leur traitement. Plateforme en forte croissance, sans interruption de service tolérée.",
+          "description": "SaaS de télésurveillance en oncologie : suivi quotidien des patients par questionnaires adaptés à leur traitement. De 10 000 à 50 000 patients suivis sur la période, au sein d'une équipe de 15 personnes.",
           "tasks": [
-            "Lead de la réécriture des backends Node en Rust, endpoint par endpoint et sans interruption de service ; choix porté par mon expérience de l'embarqué (performance, fiabilité).",
-            "Migrations et optimisation du schéma et des requêtes PostgreSQL.",
+            "Lead de la réécriture complète du backend Node en Rust, choix porté par mon expérience de l'embarqué : d'un service saturé, redémarré toutes les 30 minutes, à un backend stable pendant que la charge était multipliée par cinq.",
+            "Optimisation de la base PostgreSQL : schéma, requêtes, migrations.",
             "Tests end-to-end des services Rust, services externes simulés.",
             "Maintenance des backends LoopbackJS existants."
           ],
