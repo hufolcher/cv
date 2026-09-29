@@ -1,6 +1,6 @@
 {
   "job_title": "Ingénieur Logiciel Systèmes Critiques & Embarqués",
-  "intro": "Trois ans chez Safran sur des systèmes embarqués critiques de défense (C, Linux, FPGA, réseaux sécurisés). Aujourd'hui lead de la réécriture backend en Rust chez Cureety.",
+  "intro": "Trois ans chez Safran sur des systèmes embarqués critiques de défense (C, Linux, FPGA, réseaux sécurisés), puis lead de la réécriture backend en Rust chez Cureety.",
   "experiences": {
     "title": "expériences professionnelles",
     "common": {
@@ -12,7 +12,7 @@
       ],
       "label": "Cureety",
       "contract_type": "CDI",
-      "date": "Avril 2025 - aujourd'hui",
+      "date": "Avril 2025 - Août 2026",
       "projects": {
         "backend": {
           "label": "Back-end — lead de la réécriture Rust",
