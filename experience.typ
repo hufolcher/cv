@@ -8,24 +8,23 @@
 
 // One project: bold title, then an indented description, its tasks and its stack.
 // `project` is a translation-file entry: (label, description, tasks, stack).
-#let project(project, stack-label) = box(
+// It may continue on the next page; the title stays with the description.
+#let project(project, stack-label) = block(
   inset: (left: 20pt, right: 10pt, top: 7pt, bottom: 4pt),
-  stack(
-    dir: ttb,
-    spacing: 5pt,
-    text(weight: "bold", size: 11.5pt, project.label),
-    box(inset: (left: 8pt, right: 10pt, top: 5pt), stack(
-      dir: ttb,
-      spacing: 8pt,
-      project.description,
-      stack(
-        dir: ttb,
-        spacing: 12pt,
-        list(spacing: 7pt, ..project.tasks.map(task-item)),
-        text(size: 9.5pt, labelled-list(stack-label, project.stack)),
-      ),
-    )),
-  ),
+  breakable: true,
+  {
+    set block(spacing: 0pt)
+    block(sticky: true, below: 10pt, text(
+      weight: "bold",
+      size: 11.5pt,
+      project.label,
+    ))
+    block(inset: (left: 8pt, right: 10pt), breakable: true, {
+      block(below: 8pt, project.description)
+      block(below: 12pt, list(spacing: 7pt, ..project.tasks.map(task-item)))
+      text(size: 9.5pt, labelled-list(stack-label, project.stack))
+    })
+  },
 )
 
 // One employer: logo header (roles, contract, company, dates) followed by its projects.
