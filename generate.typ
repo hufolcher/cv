@@ -103,7 +103,7 @@
   translated.education.title,
   block(inset: (left: 14pt, right: 8pt), breakable: true, stack(
     dir: ttb,
-    spacing: 15pt,
+    spacing: 10pt,
     ..translated.education.list.map(school => stack(
       dir: ttb,
       spacing: 4pt,
