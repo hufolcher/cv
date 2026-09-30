@@ -14,15 +14,16 @@
       "contract_type": "Contrato indefinido",
       "date": "Abril 2025 - Agosto 2026",
       "projects": {
-        "backend": {
-          "label": "Back-end",
-          "description": "SaaS de telemonitorización en oncología: seguimiento diario de los pacientes mediante cuestionarios adaptados a su tratamiento. De 10 000 a 50 000 pacientes seguidos durante mi etapa, en un equipo de 15 personas.",
+        "platform": {
+          "label": "Plataforma SaaS de telemonitorización en oncología",
+          "description": "Seguimiento diario de los pacientes mediante cuestionarios adaptados a su tratamiento. De 10 000 a 50 000 pacientes seguidos durante mi etapa, en un equipo de 15 personas.",
           "tasks": [
             "Lideré la reescritura completa del backend Node en Rust, elección basada en mi experiencia en sistemas embebidos: de un servicio saturado, reiniciado cada 30 minutos, a un backend estable mientras la carga se multiplicaba por cinco.",
             "Optimización de la base PostgreSQL: esquema, consultas, migraciones.",
             "Tests end-to-end de los servicios Rust, con servicios externos simulados.",
             "Despliegue y operación de servicios en contenedores en AWS y GCP, integración continua con Jenkins.",
-            "Mantenimiento de los backends LoopbackJS existentes."
+            "Mantenimiento de los backends LoopbackJS existentes.",
+            "Migración progresiva de las interfaces React/NextJS a Flutter (Android, iOS, web) y nuevas funcionalidades."
           ],
           "stack": [
             "Rust/Actix Web/SQLx",
@@ -36,18 +37,9 @@
             "GitLab",
             "OpenTelemetry",
             "Playwright",
-            "Claude Code"
-          ]
-        },
-        "frontend": {
-          "label": "Front-end",
-          "description": "Aplicaciones para pacientes y profesionales sanitarios, móvil y web.",
-          "tasks": [
-            "Migración progresiva de las interfaces React/NextJS a Flutter (Android, iOS, web) y nuevas funcionalidades."
-          ],
-          "stack": [
             "Dart/Flutter/Riverpod",
-            "TypeScript/React"
+            "TypeScript/React",
+            "Claude Code"
           ]
         }
       }

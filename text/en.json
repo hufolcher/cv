@@ -14,15 +14,16 @@
       "contract_type": "Full-time",
       "date": "April 2025 - August 2026",
       "projects": {
-        "backend": {
-          "label": "Back-end",
-          "description": "Oncology remote-monitoring SaaS: patients are followed daily through questionnaires tailored to their treatment. Grew from 10,000 to 50,000 monitored patients during my time, in a team of 15.",
+        "platform": {
+          "label": "Oncology remote-monitoring SaaS platform",
+          "description": "Patients are followed daily through questionnaires tailored to their treatment. Grew from 10,000 to 50,000 monitored patients during my time, in a team of 15.",
           "tasks": [
             "Led the full rewrite of the Node backend in Rust, a choice driven by my embedded background: from an overloaded service restarted every 30 minutes to a stable backend while load grew fivefold.",
             "PostgreSQL optimisation: schema, queries, migrations.",
             "End-to-end tests of the Rust services, with external services simulated.",
             "Deployment and operations of containerised services on AWS and GCP, Jenkins continuous integration.",
-            "Maintenance of the existing LoopbackJS backends."
+            "Maintenance of the existing LoopbackJS backends.",
+            "Progressive migration of the React/NextJS interfaces to Flutter (Android, iOS, web), plus new features."
           ],
           "stack": [
             "Rust/Actix Web/SQLx",
@@ -36,18 +37,9 @@
             "GitLab",
             "OpenTelemetry",
             "Playwright",
-            "Claude Code"
-          ]
-        },
-        "frontend": {
-          "label": "Front-end",
-          "description": "Patient and clinician applications, mobile and web.",
-          "tasks": [
-            "Progressive migration of the React/NextJS interfaces to Flutter (Android, iOS, web), plus new features."
-          ],
-          "stack": [
             "Dart/Flutter/Riverpod",
-            "TypeScript/React"
+            "TypeScript/React",
+            "Claude Code"
           ]
         }
       }
