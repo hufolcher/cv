@@ -74,7 +74,7 @@
                 "Responsable logiciel : rédaction de la documentation technique et défense des choix de conception en revue devant les experts Naval Group.",
                 "Documentation et rapports techniques générés automatiquement (Typst)."
               ],
-              "team": "équipe de 6 : 2 logiciel, 2 matériel, 1 physicien, 1 IVVQ"
+              "team": "équipe de 6 : 2 logiciel, 2 hardware, 1 physicien, 1 IVVQ"
             },
             {
               "label": "Maintenance du système historique, resté des années sans intervention",
@@ -83,7 +83,7 @@
                 "Correction de défauts logiciels du calculateur.",
                 "Moteur de simulation de l'environnement électronique et FPGA (Python/Qt, UART) pour tester et valider chaque version logicielle sans le matériel cible."
               ],
-              "team": "en binôme avec un ingénieur matériel"
+              "team": "en binôme avec un ingénieur hardware"
             }
           ],
           "stack": [
@@ -98,7 +98,7 @@
         },
         "navkite": {
           "label": "Caisson de navigation résiliente (NavKite)",
-          "description": "Centrale inertielle couplée à un récepteur GNSS détectant les signaux malveillants : du prototype au produit catalogue Safran Electronics & Defense. En binôme avec un ingénieur matériel.",
+          "description": "Centrale inertielle couplée à un récepteur GNSS détectant les signaux malveillants : du prototype au produit catalogue Safran Electronics & Defense. En binôme avec un ingénieur hardware.",
           "tasks": [
             "Backend Python : acquisition et pilotage de la centrale inertielle, protection contre les signaux malveillants, API vers l'interface web.",
             "POC en quelques semaines, puis amélioration continue et démonstrations terrain.",
