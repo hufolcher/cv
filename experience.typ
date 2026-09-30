@@ -39,7 +39,7 @@
       logo,
       logo-width,
       upper(company.roles.join(" / ")),
-      upper[#company.contract_type · #company.work_mode | #company.label, #company.location | #company.date],
+      upper[#company.contract_type · #company.work_mode | #company.label | #company.location | #company.date],
     ),
     ..company.projects.values().map(p => project(p, stack-label)),
   ),

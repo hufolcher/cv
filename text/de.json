@@ -11,7 +11,7 @@
         "Senior Full-Stack-Softwareingenieur"
       ],
       "label": "Cureety",
-      "location": "Paris",
+      "location": "Paris 75003",
       "contract_type": "Unbefristet",
       "work_mode": "Hybrid",
       "date": "April 2025 – August 2026",
@@ -52,11 +52,11 @@
         "R&D",
         "Softwareentwicklung"
       ],
-      "label": "Safran (ehemals Orolia 2S)",
-      "location": "Sèvres",
+      "label": "Safran (ex-Orolia 2S)",
+      "location": "Sèvres 92310",
       "contract_type": "Unbefristet",
       "work_mode": "Vor Ort",
-      "date": "Januar 2022 – April 2025",
+      "date": "Jan. 2022 – April 2025",
       "projects": {
         "beluga": {
           "label": "Eingebettetes Zeit- und Frequenzsystem — Naval Group: Wartung, dann Neuentwicklung",
