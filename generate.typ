@@ -113,8 +113,11 @@
         0.75cm,
         size: 13pt,
         bottom: 4pt,
-        upper(school.label),
-        school.date,
+        grid(
+          columns: (1fr, auto),
+          column-gutter: 8pt,
+          upper(school.label), school.date,
+        ),
       ),
       box(inset: (left: project-indent, top: 4pt), stack(
         dir: ttb,
