@@ -8,7 +8,7 @@
 #set par(justify: true)
 #set page(
   paper: "a4",
-  margin: (left: 0pt, right: -1pt, top: 20pt, bottom: 20pt),
+  margin: (left: 0pt, right: -1pt, top: 30pt, bottom: 26pt),
   footer: rect(outset: 3pt, fill: brand-gradient, width: 100%, height: 50pt),
 )
 
@@ -55,7 +55,8 @@
   box(inset: 3pt, text(size: 12.1pt, fill: white, translated.intro)),
 )
 
-#box(fill: navy, inset: (top: -20pt), stack(
+// Pulled up by the top margin so the band starts at the page edge.
+#box(fill: navy, inset: (top: -30pt), stack(
   dir: ttb,
   box(
     fill: navy,
@@ -84,7 +85,7 @@
 #section(
   "icons/white/briefcase.png",
   translated.experiences.title,
-  spacing: 3pt,
+  spacing: 12pt,
   ..translated
     .experiences
     .pairs()
@@ -101,9 +102,9 @@
 #section(
   "icons/white/graduation.png",
   translated.education.title,
-  block(inset: (left: 14pt, right: 8pt), breakable: true, stack(
+  block(breakable: true, stack(
     dir: ttb,
-    spacing: 10pt,
+    spacing: 12pt,
     ..translated.education.list.map(school => stack(
       dir: ttb,
       spacing: 4pt,
@@ -115,12 +116,12 @@
         upper(school.label),
         school.date,
       ),
-      box(inset: (left: 20pt, right: 10pt, top: 5pt), stack(
+      box(inset: (left: project-indent, top: 4pt), stack(
         dir: ttb,
-        spacing: 7pt,
+        spacing: 8pt,
         ..school.steps.map(step => [
           #text(weight: "bold")[#step.location]
-          #list(..step.details)
+          #list(spacing: list-spacing, ..step.details)
         ]),
       )),
     )),
@@ -131,7 +132,7 @@
 #section(
   "icons/white/sliders.png",
   translated.skills.title,
-  box(inset: (left: 25pt, right: 20pt), stack(
+  box(inset: (left: logo-indent), stack(
     dir: ttb,
     spacing: 7pt,
     labelled-list(
@@ -150,7 +151,7 @@
   "icons/white/language.png",
   translated.languages.title,
   box(
-    inset: (left: 25pt, right: 10pt),
+    inset: (left: logo-indent),
     translated
       .languages
       .list

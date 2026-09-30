@@ -6,30 +6,44 @@
   items,
 ) = [#text(weight: "bold", label): #items.join(", ")]
 
+// Layout grid: every section sits between the same side gutters.
+#let gutter = 18pt
+// Indents inside a section: logos and skill lines, projects, then project text.
+#let logo-indent = 8pt
+#let project-indent = 20pt
+#let text-indent = 8pt
+// Bullet spacing shared by every list.
+#let list-spacing = 6pt
+
 // Section title with a gradient rule and a round icon, followed by its items.
-#let section(icon, title, spacing: 4pt, ..items) = stack(
-  dir: ttb,
-  spacing: spacing,
-  block(inset: (left: 14pt, right: 15pt), align(horizon, grid(
-    columns: (auto, 1fr, auto),
-    column-gutter: 0.5cm,
-    text(fill: navy-light, weight: "bold", size: 15pt, upper(title)),
-    line(length: 100%, stroke: 2pt + brand-gradient),
-    box(
-      fill: navy,
-      radius: 2.5cm,
-      width: 1cm,
-      height: 1cm,
-      inset: 0.25cm,
-      image(icon, height: 0.5cm),
-    ),
-  ))),
-  ..items.pos(),
+#let section(icon, title, spacing: 6pt, ..items) = block(
+  inset: (left: gutter, right: gutter + 1pt),
+  above: 16pt,
+  breakable: true,
+  stack(
+    dir: ttb,
+    spacing: spacing,
+    align(horizon, grid(
+      columns: (auto, 1fr, auto),
+      column-gutter: 0.5cm,
+      text(fill: navy-light, weight: "bold", size: 15pt, upper(title)),
+      line(length: 100%, stroke: 2pt + brand-gradient),
+      box(
+        fill: navy,
+        radius: 2.5cm,
+        width: 1cm,
+        height: 1cm,
+        inset: 0.25cm,
+        image(icon, height: 0.5cm),
+      ),
+    )),
+    ..items.pos(),
+  ),
 )
 
 // Logo beside bold blue title lines, shared by experiences and education.
 #let entry-header(logo, logo-width, size: 12.5pt, bottom: 0pt, ..lines) = block(
-  inset: (left: 9pt, right: 9pt, bottom: bottom),
+  inset: (left: logo-indent, bottom: bottom),
   breakable: true,
   align(horizon, text(fill: blue, weight: "bold", size: size, grid(
     columns: (logo-width, 1fr),

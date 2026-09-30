@@ -3,14 +3,14 @@
 // A task is a plain line, or a (label, items) group shown as a nested list.
 #let task-item(task) = if type(task) == dictionary [
   #text(weight: "semibold", task.label)
-  #list(spacing: 6pt, ..task.items)
+  #list(spacing: list-spacing, ..task.items)
 ] else { task }
 
 // One project: bold title, then an indented description, its tasks and its stack.
 // `project` is a translation-file entry: (label, description, tasks, stack).
 // It may continue on the next page; the title stays with the description.
 #let project(project, stack-label) = block(
-  inset: (left: 20pt, right: 10pt, top: 7pt, bottom: 4pt),
+  inset: (left: project-indent, top: 8pt),
   breakable: true,
   {
     set block(spacing: 0pt)
@@ -19,9 +19,12 @@
       size: 11.5pt,
       project.label,
     ))
-    block(inset: (left: 8pt, right: 10pt), breakable: true, {
+    block(inset: (left: text-indent), breakable: true, {
       block(below: 8pt, project.description)
-      block(below: 9pt, list(spacing: 6pt, ..project.tasks.map(task-item)))
+      block(below: 9pt, list(
+        spacing: list-spacing,
+        ..project.tasks.map(task-item),
+      ))
       text(size: 9.5pt, labelled-list(stack-label, project.stack))
     })
   },
@@ -31,7 +34,7 @@
 // `company` is a translation-file entry:
 // (roles, contract_type, work_mode, label, location, date, projects).
 #let experience(logo, logo-width, company, stack-label) = block(
-  inset: (left: 14pt, right: 8pt, bottom: 10pt),
+  inset: (bottom: 8pt),
   breakable: true,
   stack(
     dir: ttb,
