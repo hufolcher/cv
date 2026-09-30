@@ -18,7 +18,7 @@
       "projects": {
         "platform": {
           "label": "Plataforma SaaS de telemonitorización en oncología",
-          "description": "Seguimiento diario de los pacientes mediante cuestionarios adaptados a su tratamiento. De 10 000 a 50 000 pacientes seguidos durante mi etapa, en un equipo de 15 personas.",
+          "description": "Seguimiento diario de los pacientes mediante cuestionarios adaptados a su tratamiento. De 10 000 a 50 000 pacientes seguidos durante mi etapa, en un equipo de 15 desarrolladores fullstack.",
           "tasks": [
             "Lideré la reescritura completa del backend Node en Rust, elección basada en mi experiencia en sistemas embebidos: de un servicio saturado, reiniciado cada 30 minutos, a un backend estable mientras la carga se multiplicaba por cinco.",
             "Optimización de la base PostgreSQL: esquema, consultas, migraciones.",
@@ -59,7 +59,7 @@
       "projects": {
         "beluga": {
           "label": "Sistema de tiempo y frecuencia embebido — Naval Group: mantenimiento y rediseño",
-          "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software). Equipo multidisciplinar de 2 a 5 personas (software, electrónica, FPGA, mecánica, IVVQ).",
+          "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software).",
           "tasks": [
             {
               "label": "Diseño del nuevo sistema",
@@ -72,7 +72,8 @@
                 "Simulador completo del sistema (Python/Qt) para la automatización de pruebas y la formación de operadores.",
                 "Responsable de software: redacción de la documentación técnica y defensa de las decisiones de diseño en revisiones con los expertos de Naval Group.",
                 "Documentación e informes técnicos generados automáticamente (Typst)."
-              ]
+              ],
+              "team": "equipo de 6: 2 software, 2 hardware, 1 físico, 1 IVVQ"
             },
             {
               "label": "Mantenimiento del sistema anterior, sin intervenciones durante años",
@@ -80,7 +81,8 @@
                 "Retomé un calculador C/Linux sin documentación ni experiencia disponible: auditoría del código e ingeniería inversa de su funcionamiento.",
                 "Corrección de defectos del software del calculador.",
                 "Motor de simulación del entorno electrónico y FPGA (Python/Qt, UART) para probar y validar cada versión de software sin el hardware de destino."
-              ]
+              ],
+              "team": "en binomio con un ingeniero de hardware"
             }
           ],
           "stack": [
@@ -95,7 +97,7 @@
         },
         "navkite": {
           "label": "Unidad de navegación resiliente (NavKite)",
-          "description": "Central inercial acoplada a un receptor GNSS que detecta señales maliciosas: del prototipo a un producto del catálogo de Safran Electronics & Defense.",
+          "description": "Central inercial acoplada a un receptor GNSS que detecta señales maliciosas: del prototipo a un producto del catálogo de Safran Electronics & Defense. En binomio con un ingeniero de hardware.",
           "tasks": [
             "Backend en Python: adquisición y control de la central inercial, protección frente a señales maliciosas, API para la interfaz web.",
             "Prueba de concepto en pocas semanas, después mejora continua y demostraciones sobre el terreno.",
@@ -110,7 +112,7 @@
         },
         "chaperon": {
           "label": "Simulación GNSS para una aplicación de defensa (Skydel)",
-          "description": "Prototipo de engaño de drones mediante la emisión de señales GNSS modificadas.",
+          "description": "Prototipo de engaño de drones mediante la emisión de señales GNSS modificadas. Proyecto en solitario.",
           "tasks": [
             "Adaptación de un simulador civil a un uso de defensa crítico (C++17, Qt, cifrado).",
             "Backend C++ de supervisión y control del sistema completo (simulador, hardware), expuesto como API.",
@@ -125,7 +127,7 @@
         },
         "artcard": {
           "label": "Tarjeta de tiempo con referencia atómica (ARTCARD)",
-          "description": "Tarjeta de código abierto co-desarrollada con Meta para centros de datos: FPGA, receptor GNSS u-blox, microrreloj atómico MRO50.",
+          "description": "Tarjeta de código abierto co-desarrollada con Meta para centros de datos: FPGA, receptor GNSS u-blox, microrreloj atómico MRO50. Equipo de 2 ingenieros de software y 1 físico, junto al equipo de Meta.",
           "tasks": [
             "Sincronización del reloj con GNSS en C, desarrollo y soporte de código abierto (github.com/Orolia2s/oscillatord).",
             "Contribución al driver Linux de código abierto, hoy integrado en el kernel (github.com/Time-Appliances-Project/Time-Card); fork interno para prototipos.",

@@ -18,7 +18,7 @@
       "projects": {
         "platform": {
           "label": "Oncology remote-monitoring SaaS platform",
-          "description": "Patients are followed daily through questionnaires tailored to their treatment. Grew from 10,000 to 50,000 monitored patients during my time, in a team of 15.",
+          "description": "Patients are followed daily through questionnaires tailored to their treatment. Grew from 10,000 to 50,000 monitored patients during my time, in a team of 15 fullstack developers.",
           "tasks": [
             "Led the full rewrite of the Node backend in Rust, a choice driven by my embedded background: from an overloaded service restarted every 30 minutes to a stable backend while load grew fivefold.",
             "PostgreSQL optimisation: schema, queries, migrations.",
@@ -59,7 +59,7 @@
       "projects": {
         "beluga": {
           "label": "Embedded time & frequency system — Naval Group: maintenance, then redesign",
-          "description": "Autonomous high-precision clock distributing time in many electrical and digital formats, in a constrained environment (dedicated electronics, FPGA, software). Multidisciplinary team of 2 to 5 (software, electronics, FPGA, mechanics, IVVQ).",
+          "description": "Autonomous high-precision clock distributing time in many electrical and digital formats, in a constrained environment (dedicated electronics, FPGA, software).",
           "tasks": [
             {
               "label": "Design of the new system",
@@ -72,7 +72,8 @@
                 "Full system simulator (Python/Qt) for test automation and operator training.",
                 "Software lead: wrote the technical documentation and defended design choices in reviews with Naval Group experts.",
                 "Technical documentation and reports generated automatically (Typst)."
-              ]
+              ],
+              "team": "team of 6: 2 software, 2 hardware, 1 physicist, 1 IVVQ"
             },
             {
               "label": "Maintenance of the legacy system, untouched for years",
@@ -80,7 +81,8 @@
                 "Took over a C/Linux computer with no documentation and no remaining expertise: code audit and reverse engineering of its behaviour.",
                 "Bug fixing of the computer's software.",
                 "Simulation engine for the electronic and FPGA environment (Python/Qt, UART) to test and validate every software release without the target hardware."
-              ]
+              ],
+              "team": "paired with a hardware engineer"
             }
           ],
           "stack": [
@@ -95,7 +97,7 @@
         },
         "navkite": {
           "label": "Resilient navigation unit (NavKite)",
-          "description": "Inertial navigation unit coupled with a GNSS receiver that detects malicious signals: from prototype to a Safran Electronics & Defense catalogue product.",
+          "description": "Inertial navigation unit coupled with a GNSS receiver that detects malicious signals: from prototype to a Safran Electronics & Defense catalogue product. Paired with a hardware engineer.",
           "tasks": [
             "Python backend: acquisition and control of the inertial unit, protection against malicious signals, API for the web interface.",
             "Proof of concept within weeks, then continuous improvement and field demonstrations.",
@@ -110,7 +112,7 @@
         },
         "chaperon": {
           "label": "GNSS simulation for a defence application (Skydel)",
-          "description": "Drone spoofing prototype broadcasting modified GNSS signals.",
+          "description": "Drone spoofing prototype broadcasting modified GNSS signals. Solo project.",
           "tasks": [
             "Adapted a civil simulator to critical defence use (C++17, Qt, encryption).",
             "C++ backend supervising and controlling the whole system (simulator, hardware), exposed as an API.",
@@ -125,7 +127,7 @@
         },
         "artcard": {
           "label": "Atomic reference time card (ARTCARD)",
-          "description": "Open-source card co-developed with Meta for datacenters: FPGA, u-blox GNSS receiver, MRO50 miniature atomic clock.",
+          "description": "Open-source card co-developed with Meta for datacenters: FPGA, u-blox GNSS receiver, MRO50 miniature atomic clock. Team of 2 software engineers and 1 physicist, working with Meta's team.",
           "tasks": [
             "Clock disciplining on GNSS in C, open-source development and support (github.com/Orolia2s/oscillatord).",
             "Contribution to the open-source Linux driver, since merged into the kernel (github.com/Time-Appliances-Project/Time-Card); internal fork for prototypes.",
