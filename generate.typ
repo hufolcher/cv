@@ -19,7 +19,7 @@
 #let translated = json("text/" + language + ".json")
 
 #let logos = (
-  cureety: (path: "images/institutions/cureety.png", width: 0.75cm),
+  cureety: (path: "images/institutions/cureety.svg", width: 0.75cm),
   safran: (path: "images/institutions/safran.jpg", width: 0.75cm),
   orolia: (path: "images/institutions/orolia.jpg", width: 1.2cm),
 )
