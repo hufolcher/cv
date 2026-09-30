@@ -262,5 +262,18 @@
         "level": "Conversational"
       }
     ]
+  },
+  "interests": {
+    "title": "interests",
+    "list": [
+      {
+        "label": "home automation & IoT",
+        "detail": "Home Assistant, Zigbee, Thread, ESP32, TrueNAS NAS, networking"
+      },
+      {
+        "label": "sport",
+        "detail": "running, hiking, climbing, sailing"
+      }
+    ]
   }
 }

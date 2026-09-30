@@ -263,5 +263,18 @@
         "level": "Grundkenntnisse"
       }
     ]
+  },
+  "interests": {
+    "title": "interessen",
+    "list": [
+      {
+        "label": "Hausautomation & IoT",
+        "detail": "Home Assistant, Zigbee, Thread, ESP32, TrueNAS-NAS, Netzwerk"
+      },
+      {
+        "label": "Sport",
+        "detail": "Laufen, Wandern, Klettern, Segeln"
+      }
+    ]
   }
 }

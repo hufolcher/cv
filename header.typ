@@ -15,6 +15,13 @@
 // Bullet spacing shared by every list.
 #let list-spacing = 6pt
 
+// Bold uppercase labels with their detail in parentheses, one after the other.
+#let inline-entries(entries, separator: h(1.5em)) = {
+  entries
+    .map(((name, detail)) => [#text(weight: "bold", upper(name)) (#detail)])
+    .join(separator)
+}
+
 // Section title with a gradient rule and a round icon, followed by its items.
 #let section(icon, title, spacing: 6pt, ..items) = block(
   inset: (left: gutter, right: gutter + 1pt),

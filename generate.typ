@@ -149,16 +149,23 @@
   )),
 )
 
-// --- Languages
-#section(
-  "icons/white/language.png",
-  translated.languages.title,
-  box(
-    inset: (left: logo-indent),
-    translated
-      .languages
-      .list
-      .map(lang => [#text(weight: "bold", upper(lang.label)) (#lang.level)])
-      .join(h(1.5em)),
+// --- Languages and interests, side by side
+#block(above: 16pt, breakable: false, grid(
+  columns: (1fr, 1fr),
+  section(
+    "icons/white/language.png",
+    translated.languages.title,
+    box(inset: (left: logo-indent), inline-entries(
+      translated.languages.list.map(l => (l.label, l.level)),
+      separator: linebreak(),
+    )),
   ),
-)
+  section(
+    "icons/white/heart.png",
+    translated.interests.title,
+    box(inset: (left: logo-indent), inline-entries(
+      translated.interests.list.map(i => (i.label, i.detail)),
+      separator: linebreak(),
+    )),
+  ),
+))
