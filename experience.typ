@@ -8,18 +8,14 @@
 
 // One project: bold title, then an indented description, its tasks and its stack.
 // `project` is a translation-file entry: (label, description, tasks, stack).
-// It may continue on the next page; the title stays with the description.
+// It never splits across pages.
 #let project(project, stack-label) = block(
   inset: (left: project-indent, top: 8pt),
-  breakable: true,
+  breakable: false,
   {
     set block(spacing: 0pt)
-    block(sticky: true, below: 10pt, text(
-      weight: "bold",
-      size: 11.5pt,
-      project.label,
-    ))
-    block(inset: (left: text-indent), breakable: true, {
+    block(below: 10pt, text(weight: "bold", size: 11.5pt, project.label))
+    block(inset: (left: text-indent), {
       block(below: 8pt, project.description)
       block(below: 9pt, list(
         spacing: list-spacing,
