@@ -149,11 +149,12 @@
 #section(
   "icons/white/language.png",
   translated.languages.title,
-  box(inset: (left: 25pt, right: 10pt), stack(
-    dir: ttb,
-    spacing: 7pt,
-    ..translated.languages.list.map(lang => [
-      #text(weight: "bold")[#upper(lang.label)] (#lang.level)
-    ]),
-  )),
+  box(
+    inset: (left: 25pt, right: 10pt),
+    translated
+      .languages
+      .list
+      .map(lang => [#text(weight: "bold", upper(lang.label)) (#lang.level)])
+      .join(h(1.5em)),
+  ),
 )
