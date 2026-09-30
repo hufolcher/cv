@@ -1,0 +1,3 @@
+# Cover letters stay local; only the lorem ipsum example is versioned.
+letters/*
+!letters/example.json
