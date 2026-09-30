@@ -23,7 +23,7 @@
             "Lideré la reescritura completa del backend Node en Rust, elección basada en mi experiencia en sistemas embebidos: de un servicio saturado, reiniciado cada 30 minutos, a un backend estable mientras la carga se multiplicaba por cinco.",
             "Optimización de la base PostgreSQL: esquema, consultas, migraciones.",
             "Tests end-to-end de los servicios Rust, con servicios externos simulados.",
-            "Despliegue y operación de servicios en contenedores en AWS y GCP, integración continua con Jenkins.",
+            "Despliegue y operación de servicios en contenedores en AWS, integración continua con Jenkins.",
             "Mantenimiento de los backends LoopbackJS existentes.",
             "Migración progresiva de las interfaces React/NextJS a Flutter (Android, iOS, web) y nuevas funcionalidades."
           ],
@@ -33,7 +33,6 @@
             "REST",
             "NodeJS/LoopbackJS",
             "AWS",
-            "GCP",
             "Docker",
             "Jenkins",
             "GitLab",
