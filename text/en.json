@@ -71,6 +71,7 @@
             "Python/Qt operator HMI (TCP/IP over SSL, PostgreSQL), screens and procedures designed with the end customer.",
             "Design and code compliant with Naval Group cybersecurity requirements.",
             "Full system simulator (Python/Qt) for test automation and operator training.",
+            "Maintenance of the legacy system, untouched for years: reverse engineering and fixing of the C/Linux code, simulation of the electronic and FPGA environment to validate releases.",
             "Software lead: wrote the technical documentation and defended design choices in reviews with Naval Group experts.",
             "Technical documentation and reports generated automatically (Typst)."
           ],
@@ -80,6 +81,7 @@
             "PyQt/PySide",
             "PostgreSQL",
             "Docker",
+            "VirtualBox",
             "GitLab"
           ]
         },
@@ -125,21 +127,6 @@
             "C",
             "Python",
             "PyQt/PySide"
-          ]
-        },
-        "cachalot": {
-          "label": "Legacy time & frequency system maintenance — Naval Group",
-          "description": "Predecessor system left untouched for years: lost know-how, largely reverse engineering.",
-          "tasks": [
-            "Audit and bug fixing of the computer's C/Linux code.",
-            "Simulation of the electronic and FPGA environment (Python/Qt, UART) to validate software releases."
-          ],
-          "stack": [
-            "C",
-            "Python",
-            "PyQt/PySide",
-            "VirtualBox",
-            "GitLab"
           ]
         }
       }

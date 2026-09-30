@@ -72,6 +72,7 @@
             "IHM métier Python/Qt (TCP/IP sur SSL, PostgreSQL), écrans et procédures conçus avec le client final.",
             "Conception et code conformes aux exigences de cybersécurité de Naval Group.",
             "Simulateur complet du système (Python/Qt) pour l'automatisation des tests et la formation des opérateurs.",
+            "Maintenance du système historique, resté des années sans intervention : rétro-ingénierie et correction du code C/Linux, simulation de l'environnement électronique et FPGA pour valider les versions.",
             "Responsable logiciel : rédaction de la documentation technique et défense des choix de conception en revue devant les experts Naval Group.",
             "Documentation et rapports techniques générés automatiquement (Typst)."
           ],
@@ -81,6 +82,7 @@
             "PyQt/PySide",
             "PostgreSQL",
             "Docker",
+            "VirtualBox",
             "GitLab"
           ]
         },
@@ -126,21 +128,6 @@
             "C",
             "Python",
             "PyQt/PySide"
-          ]
-        },
-        "cachalot": {
-          "label": "Maintenance du système temps-fréquence historique — Naval Group",
-          "description": "Système prédécesseur resté des années sans intervention : compétence perdue, travail de rétro-ingénierie.",
-          "tasks": [
-            "Audit et correction du code C/Linux du calculateur.",
-            "Simulation de l'environnement électronique et FPGA (Python/Qt, UART) pour valider les versions logicielles."
-          ],
-          "stack": [
-            "C",
-            "Python",
-            "PyQt/PySide",
-            "VirtualBox",
-            "GitLab"
           ]
         }
       }
