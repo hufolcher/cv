@@ -60,3 +60,11 @@ Language and address default to `configuration.json` and can be overridden per b
 ```
 typst compile generate.typ my_resume.pdf --input language=en --input address="Paris (75000)"
 ```
+
+## Cover letter
+`letter.typ` renders a one-page letter with the CV's header and colours. Each letter is a JSON file in `letters/` (recipient, place and date, subject, salutation, paragraphs, closing); copy `letters/example.json` to start. Only the example is versioned, every other letter stays local.
+
+```
+typst compile letter.typ my_letter.pdf --input letter=letters/my_letter.json
+```
+The `language` and `address` inputs work as for the CV.
