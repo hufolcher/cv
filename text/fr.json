@@ -63,16 +63,16 @@
       "date": "Jan 2022 - Avril 2025",
       "projects": {
         "beluga": {
-          "label": "Système temps-fréquence embarqué — Naval Group",
+          "label": "Système temps-fréquence embarqué — Naval Group : maintenance puis refonte",
           "description": "Horloge de haute précision autonome, distribuant le temps sous de nombreux formats électriques et numériques, en environnement contraint (électronique dédiée, FPGA, logiciel). Équipe pluridisciplinaire de 2 à 5 personnes (logiciel, électronique, FPGA, mécanique, IVVQ).",
           "tasks": [
-            "Conception système : logique métier, boucles d'asservissement.",
+            "Maintenance du système historique, resté des années sans intervention : rétro-ingénierie et correction du code C/Linux, simulation de l'environnement électronique et FPGA pour valider les versions.",
+            "Conception du nouveau système : logique métier, boucles d'asservissement.",
             "Logiciel embarqué C/Linux : ordonnancement, pilotage des FPGA et cartes dédiées, UART, TCP/IP sur SSL, PostgreSQL.",
             "Cycle en V, code C conforme MISRA C, analyse statique SonarQube.",
             "IHM métier Python/Qt (TCP/IP sur SSL, PostgreSQL), écrans et procédures conçus avec le client final.",
             "Conception et code conformes aux exigences de cybersécurité de Naval Group.",
             "Simulateur complet du système (Python/Qt) pour l'automatisation des tests et la formation des opérateurs.",
-            "Maintenance du système historique, resté des années sans intervention : rétro-ingénierie et correction du code C/Linux, simulation de l'environnement électronique et FPGA pour valider les versions.",
             "Responsable logiciel : rédaction de la documentation technique et défense des choix de conception en revue devant les experts Naval Group.",
             "Documentation et rapports techniques générés automatiquement (Typst)."
           ],

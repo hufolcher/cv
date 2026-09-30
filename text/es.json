@@ -62,16 +62,16 @@
       "date": "Enero 2022 - Abril 2025",
       "projects": {
         "beluga": {
-          "label": "Sistema de tiempo y frecuencia embebido — Naval Group",
+          "label": "Sistema de tiempo y frecuencia embebido — Naval Group: mantenimiento y rediseño",
           "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software). Equipo multidisciplinar de 2 a 5 personas (software, electrónica, FPGA, mecánica, IVVQ).",
           "tasks": [
-            "Diseño de sistema: lógica de negocio, lazos de regulación.",
+            "Mantenimiento del sistema anterior, sin intervenciones durante años: ingeniería inversa y corrección del código C/Linux, simulación del entorno electrónico y FPGA para validar las versiones.",
+            "Diseño del nuevo sistema: lógica de negocio, lazos de regulación.",
             "Software embebido C/Linux: planificación, control de las FPGA y tarjetas dedicadas, UART, TCP/IP sobre SSL, PostgreSQL.",
             "Ciclo en V, código C conforme a MISRA C, análisis estático con SonarQube.",
             "IHM de operador en Python/Qt (TCP/IP sobre SSL, PostgreSQL), pantallas y procedimientos diseñados con el cliente final.",
             "Diseño y código conformes a los requisitos de ciberseguridad de Naval Group.",
             "Simulador completo del sistema (Python/Qt) para la automatización de pruebas y la formación de operadores.",
-            "Mantenimiento del sistema anterior, sin intervenciones durante años: ingeniería inversa y corrección del código C/Linux, simulación del entorno electrónico y FPGA para validar las versiones.",
             "Responsable de software: redacción de la documentación técnica y defensa de las decisiones de diseño en revisiones con los expertos de Naval Group.",
             "Documentación e informes técnicos generados automáticamente (Typst)."
           ],
