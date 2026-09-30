@@ -9,3 +9,4 @@ trap 'rm -rf "$out"' EXIT
 for lang in fr en es de; do
   typst compile generate.typ "$out/cv_$lang.pdf" --input language="$lang"
 done
+typst compile letter.typ "$out/letter.pdf"
