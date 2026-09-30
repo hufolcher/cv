@@ -21,6 +21,7 @@
             "Led the full rewrite of the Node backend in Rust, a choice driven by my embedded background: from an overloaded service restarted every 30 minutes to a stable backend while load grew fivefold.",
             "PostgreSQL optimisation: schema, queries, migrations.",
             "End-to-end tests of the Rust services, with external services simulated.",
+            "Deployment and operations of containerised services on AWS and GCP, Jenkins continuous integration.",
             "Maintenance of the existing LoopbackJS backends."
           ],
           "stack": [
@@ -28,23 +29,14 @@
             "PostgreSQL",
             "REST",
             "NodeJS/LoopbackJS",
-            "OpenTelemetry",
-            "Playwright",
-            "Claude Code"
-          ]
-        },
-        "infra": {
-          "label": "Infrastructure",
-          "description": "Containerised services hosted on AWS and GCP.",
-          "tasks": [
-            "Service deployment and operations, Jenkins continuous integration."
-          ],
-          "stack": [
             "AWS",
             "GCP",
             "Docker",
             "Jenkins",
-            "GitLab"
+            "GitLab",
+            "OpenTelemetry",
+            "Playwright",
+            "Claude Code"
           ]
         },
         "frontend": {
