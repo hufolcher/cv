@@ -62,14 +62,6 @@
           "description": "Autonomous high-precision clock distributing time in many electrical and digital formats, in a constrained environment (dedicated electronics, FPGA, software). Multidisciplinary team of 2 to 5 (software, electronics, FPGA, mechanics, IVVQ).",
           "tasks": [
             {
-              "label": "Maintenance of the legacy system, untouched for years",
-              "items": [
-                "Took over a C/Linux computer with no documentation and no remaining expertise: code audit and reverse engineering of its behaviour.",
-                "Bug fixing of the computer's software.",
-                "Simulation engine for the electronic and FPGA environment (Python/Qt, UART) to test and validate every software release without the target hardware."
-              ]
-            },
-            {
               "label": "Design of the new system",
               "items": [
                 "Architecture: business logic, servo loops.",
@@ -80,6 +72,14 @@
                 "Full system simulator (Python/Qt) for test automation and operator training.",
                 "Software lead: wrote the technical documentation and defended design choices in reviews with Naval Group experts.",
                 "Technical documentation and reports generated automatically (Typst)."
+              ]
+            },
+            {
+              "label": "Maintenance of the legacy system, untouched for years",
+              "items": [
+                "Took over a C/Linux computer with no documentation and no remaining expertise: code audit and reverse engineering of its behaviour.",
+                "Bug fixing of the computer's software.",
+                "Simulation engine for the electronic and FPGA environment (Python/Qt, UART) to test and validate every software release without the target hardware."
               ]
             }
           ],

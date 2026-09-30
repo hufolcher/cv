@@ -63,14 +63,6 @@
           "description": "Horloge de haute précision autonome, distribuant le temps sous de nombreux formats électriques et numériques, en environnement contraint (électronique dédiée, FPGA, logiciel). Équipe pluridisciplinaire de 2 à 5 personnes (logiciel, électronique, FPGA, mécanique, IVVQ).",
           "tasks": [
             {
-              "label": "Maintenance du système historique, resté des années sans intervention",
-              "items": [
-                "Reprise d'un calculateur C/Linux sans documentation ni expertise restante : état des lieux du code et compréhension du fonctionnement par rétro-ingénierie.",
-                "Correction de défauts logiciels du calculateur.",
-                "Moteur de simulation de l'environnement électronique et FPGA (Python/Qt, UART) pour tester et valider chaque version logicielle sans le matériel cible."
-              ]
-            },
-            {
               "label": "Conception du nouveau système",
               "items": [
                 "Architecture : logique métier, boucles d'asservissement.",
@@ -81,6 +73,14 @@
                 "Simulateur complet du système (Python/Qt) pour l'automatisation des tests et la formation des opérateurs.",
                 "Responsable logiciel : rédaction de la documentation technique et défense des choix de conception en revue devant les experts Naval Group.",
                 "Documentation et rapports techniques générés automatiquement (Typst)."
+              ]
+            },
+            {
+              "label": "Maintenance du système historique, resté des années sans intervention",
+              "items": [
+                "Reprise d'un calculateur C/Linux sans documentation ni expertise restante : état des lieux du code et compréhension du fonctionnement par rétro-ingénierie.",
+                "Correction de défauts logiciels du calculateur.",
+                "Moteur de simulation de l'environnement électronique et FPGA (Python/Qt, UART) pour tester et valider chaque version logicielle sans le matériel cible."
               ]
             }
           ],

@@ -63,14 +63,6 @@
           "description": "Autonome Hochpräzisionsuhr, die die Zeit in zahlreichen elektrischen und digitalen Formaten verteilt, in einer stark eingeschränkten Umgebung (dedizierte Elektronik, FPGA, Software). Interdisziplinäres Team von 2 bis 5 Personen (Software, Elektronik, FPGA, Mechanik, IVVQ).",
           "tasks": [
             {
-              "label": "Wartung des jahrelang unberührten Vorgängersystems",
-              "items": [
-                "Übernahme eines C/Linux-Rechners ohne Dokumentation und ohne verbliebenes Know-how: Code-Audit und Reverse Engineering seiner Funktionsweise.",
-                "Fehlerbehebung in der Rechnersoftware.",
-                "Simulations-Engine für die Elektronik- und FPGA-Umgebung (Python/Qt, UART), um jeden Softwarestand ohne Zielhardware zu testen und zu validieren."
-              ]
-            },
-            {
               "label": "Entwurf des neuen Systems",
               "items": [
                 "Architektur: Geschäftslogik, Regelkreise.",
@@ -81,6 +73,14 @@
                 "Vollständiger Systemsimulator (Python/Qt) für Testautomatisierung und Bedienerschulung.",
                 "Software-Verantwortlicher: technische Dokumentation verfasst und Designentscheidungen in Reviews mit den Experten von Naval Group vertreten.",
                 "Automatisch erzeugte technische Dokumentation und Berichte (Typst)."
+              ]
+            },
+            {
+              "label": "Wartung des jahrelang unberührten Vorgängersystems",
+              "items": [
+                "Übernahme eines C/Linux-Rechners ohne Dokumentation und ohne verbliebenes Know-how: Code-Audit und Reverse Engineering seiner Funktionsweise.",
+                "Fehlerbehebung in der Rechnersoftware.",
+                "Simulations-Engine für die Elektronik- und FPGA-Umgebung (Python/Qt, UART), um jeden Softwarestand ohne Zielhardware zu testen und zu validieren."
               ]
             }
           ],

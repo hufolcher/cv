@@ -62,14 +62,6 @@
           "description": "Reloj autónomo de alta precisión que distribuye el tiempo en numerosos formatos eléctricos y digitales, en un entorno restringido (electrónica dedicada, FPGA, software). Equipo multidisciplinar de 2 a 5 personas (software, electrónica, FPGA, mecánica, IVVQ).",
           "tasks": [
             {
-              "label": "Mantenimiento del sistema anterior, sin intervenciones durante años",
-              "items": [
-                "Retomé un calculador C/Linux sin documentación ni experiencia disponible: auditoría del código e ingeniería inversa de su funcionamiento.",
-                "Corrección de defectos del software del calculador.",
-                "Motor de simulación del entorno electrónico y FPGA (Python/Qt, UART) para probar y validar cada versión de software sin el hardware de destino."
-              ]
-            },
-            {
               "label": "Diseño del nuevo sistema",
               "items": [
                 "Arquitectura: lógica de negocio, lazos de regulación.",
@@ -80,6 +72,14 @@
                 "Simulador completo del sistema (Python/Qt) para la automatización de pruebas y la formación de operadores.",
                 "Responsable de software: redacción de la documentación técnica y defensa de las decisiones de diseño en revisiones con los expertos de Naval Group.",
                 "Documentación e informes técnicos generados automáticamente (Typst)."
+              ]
+            },
+            {
+              "label": "Mantenimiento del sistema anterior, sin intervenciones durante años",
+              "items": [
+                "Retomé un calculador C/Linux sin documentación ni experiencia disponible: auditoría del código e ingeniería inversa de su funcionamiento.",
+                "Corrección de defectos del software del calculador.",
+                "Motor de simulación del entorno electrónico y FPGA (Python/Qt, UART) para probar y validar cada versión de software sin el hardware de destino."
               ]
             }
           ],
