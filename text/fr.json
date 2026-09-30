@@ -65,8 +65,9 @@
             {
               "label": "Maintenance du système historique, resté des années sans intervention",
               "items": [
-                "Rétro-ingénierie et correction du code C/Linux du calculateur.",
-                "Simulation de l'environnement électronique et FPGA (Python/Qt, UART) pour valider les versions logicielles."
+                "Reprise d'un calculateur C/Linux sans documentation ni expertise restante : état des lieux du code et compréhension du fonctionnement par rétro-ingénierie.",
+                "Correction de défauts logiciels du calculateur.",
+                "Moteur de simulation de l'environnement électronique et FPGA (Python/Qt, UART) pour tester et valider chaque version logicielle sans le matériel cible."
               ]
             },
             {

@@ -64,8 +64,9 @@
             {
               "label": "Mantenimiento del sistema anterior, sin intervenciones durante años",
               "items": [
-                "Ingeniería inversa y corrección del código C/Linux del calculador.",
-                "Simulación del entorno electrónico y FPGA (Python/Qt, UART) para validar las versiones de software."
+                "Retomé un calculador C/Linux sin documentación ni experiencia disponible: auditoría del código e ingeniería inversa de su funcionamiento.",
+                "Corrección de defectos del software del calculador.",
+                "Motor de simulación del entorno electrónico y FPGA (Python/Qt, UART) para probar y validar cada versión de software sin el hardware de destino."
               ]
             },
             {
