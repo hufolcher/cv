@@ -37,7 +37,7 @@
     radius: 2.5cm,
     width: 3.7cm,
     height: 3.7cm,
-    image("images/me.jpeg", height: 3.7cm),
+    image("images/me_2026.jpg", height: 3.7cm),
   ),
 )
 
