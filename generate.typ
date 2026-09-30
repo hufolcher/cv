@@ -119,7 +119,7 @@
         dir: ttb,
         spacing: 7pt,
         ..school.steps.map(step => [
-          #text(weight: "bold")[#step.location],
+          #text(weight: "bold")[#step.location]
           #list(..step.details)
         ]),
       )),
