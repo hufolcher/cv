@@ -29,7 +29,8 @@
 )
 
 // One employer: logo header (roles, contract, company, dates) followed by its projects.
-// `company` is a translation-file entry: (roles, contract_type, label, date, projects).
+// `company` is a translation-file entry:
+// (roles, contract_type, work_mode, label, location, date, projects).
 #let experience(logo, logo-width, company, stack-label) = block(
   inset: (left: 14pt, right: 8pt, bottom: 15pt),
   breakable: true,
@@ -40,7 +41,7 @@
       logo,
       logo-width,
       upper(company.roles.join(" / ")),
-      upper[#company.contract_type | #company.label | #company.date],
+      upper[#company.contract_type · #company.work_mode | #company.label, #company.location | #company.date],
     ),
     ..company.projects.values().map(p => project(p, stack-label)),
   ),

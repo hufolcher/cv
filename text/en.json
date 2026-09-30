@@ -11,7 +11,9 @@
         "Senior Fullstack Software Engineer"
       ],
       "label": "Cureety",
+      "location": "Paris",
       "contract_type": "Full-time",
+      "work_mode": "Hybrid",
       "date": "April 2025 - August 2026",
       "projects": {
         "platform": {
@@ -50,7 +52,9 @@
         "Software Development"
       ],
       "label": "Safran (formerly Orolia 2S)",
+      "location": "Sèvres",
       "contract_type": "Full-time",
+      "work_mode": "On-site",
       "date": "January 2022 - April 2025",
       "projects": {
         "beluga": {

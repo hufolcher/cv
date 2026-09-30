@@ -11,7 +11,9 @@
         "Ingeniero de software fullstack senior"
       ],
       "label": "Cureety",
+      "location": "París",
       "contract_type": "Contrato indefinido",
+      "work_mode": "Híbrido",
       "date": "Abril 2025 - Agosto 2026",
       "projects": {
         "platform": {
@@ -49,9 +51,11 @@
         "Ingeniero de sistemas R&D",
         "Desarrollo de software"
       ],
-      "label": "Safran (antes Orolia 2S)",
+      "label": "Safran (ex Orolia 2S)",
+      "location": "Sèvres",
       "contract_type": "Contrato indefinido",
-      "date": "Enero 2022 - Abril 2025",
+      "work_mode": "Presencial",
+      "date": "Ene 2022 - Abril 2025",
       "projects": {
         "beluga": {
           "label": "Sistema de tiempo y frecuencia embebido — Naval Group: mantenimiento y rediseño",

@@ -11,7 +11,9 @@
         "ingénieur logiciel fullstack senior"
       ],
       "label": "Cureety",
+      "location": "Paris 3e",
       "contract_type": "CDI",
+      "work_mode": "Hybride",
       "date": "Avril 2025 - Août 2026",
       "projects": {
         "platform": {
@@ -51,7 +53,9 @@
         "développement logiciel"
       ],
       "label": "Safran (ex-Orolia 2S)",
+      "location": "Sèvres",
       "contract_type": "CDI",
+      "work_mode": "Présentiel",
       "date": "Jan 2022 - Avril 2025",
       "projects": {
         "beluga": {
