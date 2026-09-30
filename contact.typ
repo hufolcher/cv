@@ -1,3 +1,12 @@
+// Name and contact details, shared by the CV and cover letters.
+#let identity = (
+  first-name: "Hugo",
+  last-name: "Folcher",
+  mail: "hle.folcher@gmail.com",
+  linkedin: "hugo-folcher",
+  github: "hufolcher",
+)
+
 // One contact entry of the header band: round icon, then its label.
 #let contact-item(icon, label) = stack(
   dir: ltr,

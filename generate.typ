@@ -47,8 +47,8 @@
   stack(
     dir: ltr,
     spacing: 6pt,
-    text(size: 32pt, fill: white, weight: "bold")[Hugo],
-    text(size: 32pt, fill: white)[Folcher],
+    text(size: 32pt, fill: white, weight: "bold", identity.first-name),
+    text(size: 32pt, fill: white, identity.last-name),
   ),
   text(size: 16pt, fill: white, translated.job_title),
   line(length: 100%, stroke: 2pt + brand-gradient),
@@ -73,9 +73,9 @@
     stack(
       dir: ltr,
       spacing: 1fr,
-      contact-item("icons/grey/mail.png", "hle.folcher@gmail.com"),
-      contact-item("icons/grey/linkedin.png", "hugo-folcher"),
-      contact-item("icons/grey/github.png", "hufolcher"),
+      contact-item("icons/grey/mail.png", identity.mail),
+      contact-item("icons/grey/linkedin.png", identity.linkedin),
+      contact-item("icons/grey/github.png", identity.github),
       contact-item("icons/grey/marker.png", address),
     ),
   ),
