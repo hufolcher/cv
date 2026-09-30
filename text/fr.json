@@ -110,7 +110,7 @@
         },
         "artcard": {
           "label": "Carte de temps à référence atomique (ARTCARD)",
-          "description": "Carte open source co-développée avec Meta pour les datacenters : FPGA, récepteur GNSS u-blox, micro-horloge atomique MRO50.",
+          "description": "Carte open source co-développée avec Meta pour les datacenters : FPGA, GNSS u-blox, horloge atomique MRO50.",
           "tasks": [
             "Asservissement de l'horloge sur GNSS en C, développement et support open source (github.com/Orolia2s/oscillatord).",
             "Contribution au driver Linux open source, intégré depuis au noyau (github.com/Time-Appliances-Project/Time-Card) ; fork interne pour les prototypes.",
