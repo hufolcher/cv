@@ -1,6 +1,6 @@
 {
   "job_title": "Softwareingenieur",
-  "intro": "Absolvent der Mines Saint-Étienne. Drei Jahre bei Safran an kritischen eingebetteten Verteidigungssystemen (C, Linux, FPGA, sichere Netzwerke), mit Sicherheitsüberprüfung, danach backendorientierter Full-Stack-Ingenieur (Rust) bei Cureety.",
+  "intro": "Absolvent der Mines Saint-Étienne. Drei Jahre bei Safran an kritischen eingebetteten Verteidigungssystemen (C, Linux, FPGA, sichere Netzwerke), in dieser Zeit sicherheitsüberprüft, danach backendorientierter Full-Stack-Ingenieur (Rust) bei Cureety.",
   "experiences": {
     "title": "berufserfahrung",
     "common": {
