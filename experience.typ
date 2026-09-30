@@ -1,8 +1,8 @@
 #import "header.typ": *
 
-// A task is a plain line, or a (label, items) group shown as a nested list.
+// A task is a plain line, or a (label, items, team?) group shown as a nested list.
 #let task-item(task) = if type(task) == dictionary [
-  #text(weight: "semibold", task.label)
+  #text(weight: "semibold", task.label)#if "team" in task [ — #task.team]
   #list(spacing: list-spacing, ..task.items)
 ] else { task }
 
