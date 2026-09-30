@@ -100,7 +100,7 @@
           "label": "Caisson de navigation résiliente (NavKite)",
           "description": "Centrale inertielle couplée à un récepteur GNSS détectant les signaux malveillants : du prototype au produit catalogue Safran Electronics & Defense. En binôme avec un ingénieur hardware.",
           "tasks": [
-            "Backend Python : acquisition et pilotage de la centrale inertielle, protection contre les signaux malveillants, API vers l'interface web.",
+            "Backend Python : acquisition et pilotage de la centrale inertielle, protection contre les signaux malveillants, API web.",
             "POC en quelques semaines, puis amélioration continue et démonstrations terrain.",
             "Industrialisation : packaging et OS Linux sur mesure (Buildroot)."
           ],
@@ -131,7 +131,7 @@
           "description": "Carte open source co-développée avec Meta pour les datacenters : FPGA, GNSS u-blox, horloge atomique MRO50. Équipe de 2 ingénieurs logiciel et 1 physicien, avec l'équipe de Meta.",
           "tasks": [
             "Asservissement de l'horloge sur GNSS en C, développement et support open source (github.com/Orolia2s/oscillatord).",
-            "Contribution au driver Linux open source, intégré depuis au noyau (github.com/Time-Appliances-Project/Time-Card) ; fork interne pour les prototypes.",
+            "Contribution au driver Linux open source, intégré depuis au noyau (github.com/Time-Appliances-Project/Time-Card).",
             "Banc de programmation (FTDI, FPGA, EEPROM) et de test, avec IHM opérateur pour la production chez l'EMS AsteelFlash."
           ],
           "stack": [
