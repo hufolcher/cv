@@ -97,8 +97,6 @@
     )),
 )
 
-#pagebreak()
-
 // --- Education
 #section(
   "icons/white/graduation.png",
