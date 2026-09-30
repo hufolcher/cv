@@ -57,15 +57,26 @@
           "label": "Embedded time & frequency system — Naval Group: maintenance, then redesign",
           "description": "Autonomous high-precision clock distributing time in many electrical and digital formats, in a constrained environment (dedicated electronics, FPGA, software). Multidisciplinary team of 2 to 5 (software, electronics, FPGA, mechanics, IVVQ).",
           "tasks": [
-            "Maintenance of the legacy system, untouched for years: reverse engineering and fixing of the C/Linux code, simulation of the electronic and FPGA environment to validate releases.",
-            "New system design: business logic, servo loops.",
-            "Embedded C/Linux software: scheduling, control of the FPGAs and dedicated boards, UART, TCP/IP over SSL, PostgreSQL.",
-            "V-cycle, MISRA C compliant code, SonarQube static analysis.",
-            "Python/Qt operator HMI (TCP/IP over SSL, PostgreSQL), screens and procedures designed with the end customer.",
-            "Design and code compliant with Naval Group cybersecurity requirements.",
-            "Full system simulator (Python/Qt) for test automation and operator training.",
-            "Software lead: wrote the technical documentation and defended design choices in reviews with Naval Group experts.",
-            "Technical documentation and reports generated automatically (Typst)."
+            {
+              "label": "Maintenance of the legacy system, untouched for years",
+              "items": [
+                "Reverse engineering and bug fixing of the computer's C/Linux code.",
+                "Simulation of the electronic and FPGA environment (Python/Qt, UART) to validate software releases."
+              ]
+            },
+            {
+              "label": "Design of the new system",
+              "items": [
+                "Architecture: business logic, servo loops.",
+                "Embedded C/Linux software: scheduling, control of the FPGAs and dedicated boards, UART, TCP/IP over SSL, PostgreSQL.",
+                "V-cycle, MISRA C compliant code, SonarQube static analysis.",
+                "Python/Qt operator HMI (TCP/IP over SSL, PostgreSQL), screens and procedures designed with the end customer.",
+                "Design and code compliant with Naval Group cybersecurity requirements.",
+                "Full system simulator (Python/Qt) for test automation and operator training.",
+                "Software lead: wrote the technical documentation and defended design choices in reviews with Naval Group experts.",
+                "Technical documentation and reports generated automatically (Typst)."
+              ]
+            }
           ],
           "stack": [
             "C",

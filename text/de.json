@@ -58,15 +58,26 @@
           "label": "Eingebettetes Zeit- und Frequenzsystem — Naval Group: Wartung, dann Neuentwicklung",
           "description": "Autonome Hochpräzisionsuhr, die die Zeit in zahlreichen elektrischen und digitalen Formaten verteilt, in einer stark eingeschränkten Umgebung (dedizierte Elektronik, FPGA, Software). Interdisziplinäres Team von 2 bis 5 Personen (Software, Elektronik, FPGA, Mechanik, IVVQ).",
           "tasks": [
-            "Wartung des jahrelang unberührten Vorgängersystems: Reverse Engineering und Fehlerbehebung im C/Linux-Code, Simulation der Elektronik- und FPGA-Umgebung zur Validierung der Softwarestände.",
-            "Entwurf des neuen Systems: Geschäftslogik, Regelkreise.",
-            "Embedded-Software in C/Linux: Ablaufsteuerung, Ansteuerung der FPGAs und dedizierten Platinen, UART, TCP/IP über SSL, PostgreSQL.",
-            "V-Modell, MISRA-C-konformer Code, statische Analyse mit SonarQube.",
-            "Bedienoberfläche in Python/Qt (TCP/IP über SSL, PostgreSQL), Bildschirme und Abläufe mit dem Endkunden entworfen.",
-            "Entwurf und Code konform zu den Cybersecurity-Anforderungen von Naval Group.",
-            "Vollständiger Systemsimulator (Python/Qt) für Testautomatisierung und Bedienerschulung.",
-            "Software-Verantwortlicher: technische Dokumentation verfasst und Designentscheidungen in Reviews mit den Experten von Naval Group vertreten.",
-            "Automatisch erzeugte technische Dokumentation und Berichte (Typst)."
+            {
+              "label": "Wartung des jahrelang unberührten Vorgängersystems",
+              "items": [
+                "Reverse Engineering und Fehlerbehebung im C/Linux-Code des Rechners.",
+                "Simulation der Elektronik- und FPGA-Umgebung (Python/Qt, UART) zur Validierung der Softwarestände."
+              ]
+            },
+            {
+              "label": "Entwurf des neuen Systems",
+              "items": [
+                "Architektur: Geschäftslogik, Regelkreise.",
+                "Embedded-Software in C/Linux: Ablaufsteuerung, Ansteuerung der FPGAs und dedizierten Platinen, UART, TCP/IP über SSL, PostgreSQL.",
+                "V-Modell, MISRA-C-konformer Code, statische Analyse mit SonarQube.",
+                "Bedienoberfläche in Python/Qt (TCP/IP über SSL, PostgreSQL), Bildschirme und Abläufe mit dem Endkunden entworfen.",
+                "Entwurf und Code konform zu den Cybersecurity-Anforderungen von Naval Group.",
+                "Vollständiger Systemsimulator (Python/Qt) für Testautomatisierung und Bedienerschulung.",
+                "Software-Verantwortlicher: technische Dokumentation verfasst und Designentscheidungen in Reviews mit den Experten von Naval Group vertreten.",
+                "Automatisch erzeugte technische Dokumentation und Berichte (Typst)."
+              ]
+            }
           ],
           "stack": [
             "C",
